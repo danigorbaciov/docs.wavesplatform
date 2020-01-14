@@ -571,12 +571,13 @@ module.exports = {
         {
           title: 'On Ubuntu',
           path: nodePath + 'how-to-install-a-node/on-ubuntu',
-        }
+        },
+        {
+          title: 'Alternative Method (Installing SBT)',
+          path: nodePath + 'how-to-build-and-test-a-node',
+        },
+		
       ],
-    },
-    {
-      title: 'How to build and test a node',
-      path: nodePath + 'how-to-build-and-test-a-node',
     },
     {
       title: 'Options for getting actual blockchain',

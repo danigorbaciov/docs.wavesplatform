@@ -1,13 +1,13 @@
-# How to Build and Test a Node
+# Alternative Method (Installing SBT)
 
-The node can be built and installed wherever java can run.For _**Ubuntu**_,sbt packageAll ‌produces only deb package but for other operating systems, ZIP archive or a fat JAR can be used as well.
-To build and test your Waves Node, you will need to follow these steps:
+The node can be built and installed on any device that supports java. For **Ubuntu**, SBT packageAll ‌produces only DEB package but for other operating systems, ZIP archive or a fat JAR can be used as well.
+To build and test your Waves Node, follow the steps:
 
-## 1. Setup the environment
+## 1. Setup the Environment
 
 * ### Installing Java
 
-```
+```bash
 sudo apt-get update
 sudo apt-get install default-jre default-jdk
 ```
@@ -17,44 +17,44 @@ Please follow the SBT installation instructions depending on your operating syst
 
 ## 2. Obtaining Source Codes
 
-```
+```bash
 git clone git@github.com:wavesplatform/Waves.git
 cd Waves
 ```
 
-## 3. Running unit tests
+## 3. Running Unit Tests
 
-```
+```bash
 sbt test
 ```
 
-## 4. Building packages
+## 4. Building Packages
 
 * ### Mainnet
 
-```
+```bash
 sbt packageAll
 ```
 
 * ### Testnet
 
-```
+```bash
 sbt -Dnetwork=testnet packageAll
 ```
 
-## 5. Installing DEB package
+## 5. Installing DEB Package
 
 DEB package located in target folder. You can replace '\*' with actual package name:
 
-```
+```bash
 sudo dpkg -i target/*.deb
 ```
 
-## 6. Running fat jar
+## 6. Running Fat JAR
 
 You can replace waves-all\*.jar with actual jar name \(it should have "all"-word\):
 
-```
+```bash
 java -jar target/waves-all*.jar path/to/config/file
 ```
 

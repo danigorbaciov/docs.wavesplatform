@@ -497,7 +497,12 @@ module.exports = {
         {
           title: 'Установка ноды на Ubuntu',
           path: nodePath + 'how-to-install-a-node/on-ubuntu',
-        }
+        },
+        {
+          title: 'Альтернативный метод (Установка SBT)',
+          path: nodePath + 'how-to-build-and-test-a-node',
+        },
+		
       ],
     },
 	{
