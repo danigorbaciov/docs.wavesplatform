@@ -519,6 +519,10 @@ module.exports = {
         },
       ],
     },
+    {
+      title: 'Обновление ноды Waves',
+      path: nodePath + 'upgrading',
+    },
 	{
       title: 'Как откатить ноду',
       path: nodePath + 'how-to-rollback-a-node',
@@ -554,10 +558,6 @@ module.exports = {
     {
       title: 'Запуск ноды Waves в Яндекс.Облаке',
       path: nodePath + 'running-waves-node-in-yandex-cloud',
-    },
-    {
-      title: 'Обновление ноды Waves',
-      path: nodePath + 'upgrading',
     },
     {
       title: 'Конфигурация ноды',
