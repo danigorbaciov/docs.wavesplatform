@@ -1,25 +1,23 @@
-# How to Rollback Your Node
+# How to Rollback Waves Node
 
-The user can **rollback** to a specific height which will remove all blocks after that given height.
+You can **rollback** your node to a specific height to remove all blocks after that given height.
 
-The user has two options:
+There are two options:
 
-1. The user is able to implement rollback under the following condition: **the rolling back can be implemented no more than 2000 blocks. **The node's owner can implement the rollback by Using `REST/debug/rollback` with the **API key** \(Please, check [_**Waves Full Node API**_](https://nodes.wavesplatform.com/api-docs/index.html#!/debug/rollback)\). For example,
-```js
-   {
-     "rollbackTo": 1057490,
-     "returnTransactionsToUtx": false
-   }
-```
-2. If the condition is not met \(the user needs to rollback to more than 2000 blocks\), then the user needs to follow these [_**instructions**_](/en/waves-node/options-for-getting-actual-blockchain) to get the actual blockchain state.
+1. The user is able to implement rollback under the following condition: **the rolling back can be implemented no more than 2000 blocks.** Node owner can implement the rollback by using `REST/debug/rollback` with the **API key** \(See [_**Waves Full Node API**_](https://nodes.wavesplatform.com/api-docs/index.html#!/debug/rollback)\). For example,
 
-You can use [**_chaincmp_**](https://github.com/wavesplatform/gowaves/releases/tag/v0.1.2) utility to compare blockchains on the node and reference nodes.
+   ```js
+      {
+        "rollbackTo": 1057490,
+        "returnTransactionsToUtx": false
+      }
+   ```
 
+2. If the condition is not met \(the user needs to rollback to more than 2000 blocks\), then follow the steps described in  [Options for Getting Actual Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article to get the actual blockchain state.
 
+You can use [**chaincmp**](https://github.com/wavesplatform/gowaves/releases/tag/v0.1.2) utility to compare blockchains on the node and reference nodes.
 
+## Common Issues While Implementing a Rollback
 
-## Common issues while implementing rollback
-
-If the user requests a **rollback** via **curl/swagger** and gets **error 503,** it doesn't mean its not processing the user request \(It is just its timeout'ed\). To check if nodes actually processing, make sure to check that user's node state doesn't change \(with status check if block height is not rising\) after the user starts reroll. It will take some time to process to start _synchronization_ again from a desired location.  
-The node can process a **rollback** to up to **2000 blocks** without restating, so if the user is on fork for some reason then be sure to rollback as soon as possible or you will have to restate probably for longer period of time than it is intended.
-
+If the user requests a **rollback** via **curl/swagger** and gets **error 503,** it doesn't mean its not processing the request \(It means that it timed out\). To make sure that the node is actually processing, check that the node state doesn't change \(with status check if the block height is not rising\) after starting to reroll. It will take some processing time to start _synchronization_ again from a desired location.  
+The node can process a **rollback** to up to **2000 blocks** without restating, so if the node is on fork for some reason then rollback as soon as possible or you will have to restate and that will probably take longer time.
