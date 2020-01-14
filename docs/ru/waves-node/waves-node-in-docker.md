@@ -16,9 +16,9 @@
 
 ## Запуск образа
 
-Рекомендуется подробно ознакомиться со статьёй [Конфигурация ноды](https://docs.wavesplatform.com/en/waves-node/how-to-configure-a-node.html) перед запуском контейнера.
+Рекомендуется подробно ознакомиться со статьёй [Конфигурация ноды](/ru/waves-node/node-configuration) перед запуском контейнера.
 
-Самый простой способ запуска контейнера:
+Для запуска контейнера используйте команду:
 
 ```bash
 docker run -it wavesplatform/node
@@ -27,13 +27,13 @@ docker run -it wavesplatform/node
 **Примечание**: Мы рекомендуем запускать контейнер для MAINNET так:
 
 ```bash
-docker run -p 6869:6869 -p 6868:6868 -e WAVES_NETWORK=MAINNET -e WAVES_LOG_LEVEL=DEBUG -e WAVES_HEAP_SIZE=2g -v YOUR_LOCAL_PATH_HERE:/waves wavesplatform/node    
+docker run -p 6869:6869 -p 6868:6868 -e WAVES_NETWORK=MAINNET -e WAVES_LOG_LEVEL=DEBUG -e WAVES_HEAP_SIZE=2g -v YOUR_LOCAL_PATH_HERE:/waves wavesplatform/node
 ```
 
 **Для TESTNET:**
 
 ```bash
-docker run -p 6869:6869 -p 6863:6863 -e WAVES_NETWORK=TESTNET -e WAVES_LOG_LEVEL=DEBUG -e WAVES_HEAP_SIZE=2g -v YOUR_LOCAL_PATH_HERE:/waves wavesplatform/node    
+docker run -p 6869:6869 -p 6863:6863 -e WAVES_NETWORK=TESTNET -e WAVES_LOG_LEVEL=DEBUG -e WAVES_HEAP_SIZE=2g -v YOUR_LOCAL_PATH_HERE:/waves wavesplatform/node
 ```
 
 **Можно запустить контейнер с предустановленными переменными среды:**
@@ -52,14 +52,14 @@ docker run -p 6869:6869 -p 6863:6863 -e WAVES_NETWORK=TESTNET -e WAVES_LOG_LEVEL
 |`WAVES_AUTODETECT_ADDRESS`        |Установите значение `yes` чтобы получить свой публичный адрес и назначить его в качестве значения `declared-address`.|
 |`WAVES_AUTODETECT_ADDRESS_PORT`   |`WAVES_AUTODETECT_ADDRESS` может получить только IP адрес ноды, но не номер порта, задайте номер порта с помощью это переменной.|
 
-**Примение**: Все переменные не являются обязательными. 
+**Примение**: Все переменные не являются обязательными.
 
 ## Конфигурация
 
 Образ поддерживает конфигурирование при помощи переменных среды. В зависимости от переменных среды, образ генерирует файл local.conf и сохраняет его в папке `/waves/configs`.
 Чтобы задать значение в файле конфигурации следуйте простым привилам:
 
-1. Определите путь до переменной в файле конфигурации ([complete configuration file](https://docs.wavesplatform.com/en/waves-node/how-to-configure-a-node.html))
+1. Определите путь до переменной в файле конфигурации ([complete configuration file](/ru/waves-node/node-configuration)
 2. Соединяйте все имена секций двойным underscore (`__`).
 3. Замените все тире одиночными underscore (`_`).
 4. Капитализируйте последнюю строку.
