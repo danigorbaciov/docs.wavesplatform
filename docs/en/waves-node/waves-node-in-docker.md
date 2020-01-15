@@ -1,12 +1,12 @@
 # Waves Node in Docker
 
-The easiest way to **run a Waves Node** is by using the new **Waves Docker container**. It requires just **one command** to enable everything or to change the settings of the node.
+The easiest way to **run a Waves Node** is by means of **Waves Docker container**. It requires just **one command** to enable everything or to change the settings of your node.
 
 ## Prerequisites
 
 You need to install the latest version of Docker.
 
-Please, follow installation steps described at the [Docker Site](https://docs.docker.com/engine/installation/).
+Please, follow installation steps described on the [Docker](https://docs.docker.com/engine/installation/) website.
 
 ## About the image
 

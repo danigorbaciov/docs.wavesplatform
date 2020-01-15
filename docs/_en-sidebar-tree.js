@@ -549,7 +549,7 @@ module.exports = {
 
   [nodePath]: [
     {
-      title: 'Node owner guide',
+      title: 'Node Owner Guide',
       path: nodePath,
     },
     {
@@ -557,11 +557,11 @@ module.exports = {
       path: nodePath + 'what-is-a-full-node',
     },
     {
-      title: 'How to install a node',
+      title: 'How to Install a Node',
       path: nodePath + 'how-to-install-a-node/how-to-install-a-node',
       children: [
         {
-          title: 'Waves node in Docker',
+          title: 'Waves Node in Docker',
           path: nodePath + 'waves-node-in-docker',
         },  
         {
@@ -584,7 +584,7 @@ module.exports = {
       ],
     },
     {
-      title: 'Options for getting actual blockchain',
+      title: 'Options for Getting Actual Blockchain',
       path: nodePath + 'options-for-getting-actual-blockchain',
       children: [
         {
@@ -602,15 +602,15 @@ module.exports = {
       path: nodePath + 'upgrading',
     },
     {
-      title: 'How to rollback a node',
+      title: 'How to Rollback a Node',
       path: nodePath + 'how-to-rollback-a-node',
     },
     {
-      title: 'Joining testnet',
+      title: 'Joining Testnet',
       path: nodePath + 'joining-testnet',
     },
     {
-      title: 'Private Waves network',
+      title: 'Private Waves Network',
       path: nodePath + 'private-waves-network',
     },
     {
@@ -644,15 +644,15 @@ module.exports = {
       ],
     },
     {
-      title: 'Node configuration file',
+      title: 'Node Configuration File',
       path: nodePath + 'node-configuration-file',
     },
     {
-      title: 'Node configuration',
+      title: 'Node Configuration',
       path: nodePath + 'node-configuration',
     },
     {
-      title: 'Logging configuration',
+      title: 'Logging Configuration',
       path: nodePath + 'logging-configuration',
     },
     {
