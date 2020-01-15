@@ -506,7 +506,10 @@ module.exports = {
           title: 'Альтернативный метод (Установка SBT)',
           path: nodePath + 'how-to-build-and-test-a-node',
         },
-		
+		{
+          title: 'Запуск ноды Waves в Яндекс.Облаке',
+          path: nodePath + 'running-waves-node-in-yandex-cloud',
+        },
       ],
     },
 	{
@@ -558,10 +561,6 @@ module.exports = {
 	{
       title: 'Node API',
       path: nodePath + 'node-api',
-    },
-    {
-      title: 'Запуск ноды Waves в Яндекс.Облаке',
-      path: nodePath + 'running-waves-node-in-yandex-cloud',
     },
     {
       title: 'Конфигурация ноды',

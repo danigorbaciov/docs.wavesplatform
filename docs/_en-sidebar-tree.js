@@ -580,7 +580,10 @@ module.exports = {
           title: 'Alternative Method (Installing SBT)',
           path: nodePath + 'how-to-build-and-test-a-node',
         },
-		
+	    {
+          title: 'Running Waves Node in Yandex.Cloud',
+          path: nodePath + 'running-waves-node-in-yandex-cloud',
+        },	
       ],
     },
     {
@@ -714,10 +717,6 @@ module.exports = {
           path: nodePath + 'node-api/example-transactions',
         }
       ],
-    },
-    {
-      title: 'Running Waves Node in Yandex.Cloud',
-      path: nodePath + 'running-waves-node-in-yandex-cloud',
     },
     {
       title: 'API limitations of the pool of public nodes',

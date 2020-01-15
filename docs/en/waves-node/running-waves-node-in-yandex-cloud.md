@@ -16,7 +16,7 @@
 
 ![](./_assets/search-bar.png)
 
-5.&nbsp;Set the parameters of the virtual machine. See the [Hardware requirements](/en/waves-node/prerequisites/hardware-requirements) page for minimum hardware requirements to start the node.
+5.&nbsp;Set the parameters of the virtual machine. See the hardware requirements on the [Node Owner Guide](/en/waves-node) page for minimum hardware requirements to start the node.
 
 ![](./_assets/virtual-machine-parameters.png)
 
