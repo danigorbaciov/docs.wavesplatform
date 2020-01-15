@@ -610,7 +610,7 @@ module.exports = {
       path: nodePath + 'joining-testnet',
     },
     {
-      title: 'Private Waves Network',
+      title: 'Private Waves Blockchain',
       path: nodePath + 'private-waves-network',
     },
     {

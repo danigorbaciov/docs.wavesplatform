@@ -535,6 +535,10 @@ module.exports = {
       title: 'Waves Testnet',
       path: nodePath + 'joining-testnet',
     },
+    {
+      title: 'Приватный блокчейн Waves',
+      path: nodePath + 'private-waves-network',
+    },
 	{
       title: 'Расширения',
       path: nodePath + 'extensions',
