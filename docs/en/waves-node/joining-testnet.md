@@ -1,13 +1,14 @@
 # Waves Testnet
 
-Testnet is a fully functioning Waves blockchain with the one key exception that because the Waves on the network can be created freely, it has no value. Testnet helps developers test new versions of Waves, as well as test network operations using identical versions of the software before they are carried out on the mainnet.
-
+Testnet is a fully functional Waves blockchain with one key exception that Waves tokens on the test network can be created freely, so they have no value. Testnet helps developers test new versions of Waves, as well as test network operations using identical versions of the software before they are carried out on the mainnet.
 
 ## How to Join Waves Testnet
 
-1. The simplest way to join a Waves testnet is by running the **docker container image** as explained [_**here**_](/en/waves-node/waves-node-in-docker).
-2. The other way is by following the guide of [_**how to install a Waves node**_](/en/waves-node/how-to-install-a-node/how-to-install-a-node)_**.**_
+1. The simplest way to join Waves testnet is by running the **Docker container image** as explained [here](/en/waves-node/waves-node-in-docker).
+2. The other way is by following the steps described in [How to Install Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
 
-# How to Get Waves Tokens on testnet
+**Note**: In general, the difference between a Testnet and a Mainnet node is the config file (.conf) used.
 
-> [https://testnet.wavesexplorer.com/faucet](https://testnet.wavesexplorer.com/faucet)
+## How to Get Waves Tokens on Testnet
+
+> Waves for Testnet can be obtained for free on the [https://testnet.wavesexplorer.com/faucet](https://testnet.wavesexplorer.com/faucet) website.

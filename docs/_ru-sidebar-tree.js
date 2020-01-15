@@ -532,7 +532,7 @@ module.exports = {
       path: nodePath + 'how-to-rollback-a-node',
     },
 	{
-      title: 'Про Waves Testnet',
+      title: 'Waves Testnet',
       path: nodePath + 'joining-testnet',
     },
 	{
