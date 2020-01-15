@@ -561,6 +561,10 @@ module.exports = {
       path: nodePath + 'how-to-install-a-node/how-to-install-a-node',
       children: [
         {
+          title: 'Waves node in Docker',
+          path: nodePath + 'waves-node-in-docker',
+        },  
+        {
           title: 'On Mac',
           path: nodePath + 'how-to-install-a-node/on-mac',
         },
@@ -600,10 +604,6 @@ module.exports = {
     {
       title: 'How to rollback a node',
       path: nodePath + 'how-to-rollback-a-node',
-    },
-    {
-      title: 'Waves node in Docker',
-      path: nodePath + 'waves-node-in-docker',
     },
     {
       title: 'Joining testnet',

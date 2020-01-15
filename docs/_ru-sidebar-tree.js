@@ -486,7 +486,11 @@ module.exports = {
       title: 'Как установить ноду',
       path: nodePath + 'how-to-install-a-node/how-to-install-a-node',
       children: [
-        {
+	    {
+          title: 'Запуск ноды в Docker',
+          path: nodePath + 'waves-node-in-docker',
+        },
+		{
           title: 'Установка ноды на Mac',
           path: nodePath + 'how-to-install-a-node/on-mac',
         },
@@ -526,10 +530,6 @@ module.exports = {
 	{
       title: 'Как откатить ноду',
       path: nodePath + 'how-to-rollback-a-node',
-    },
-	{
-      title: 'Запуск ноды в Docker',
-      path: nodePath + 'waves-node-in-docker',
     },
 	{
       title: 'Про Waves Testnet',
