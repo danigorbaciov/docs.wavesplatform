@@ -1,4 +1,4 @@
-# Запуск Waves Node в Яндекс.Облаке
+# Запуск Waves Node в Yandex.Cloud
 
 1.&nbsp;В [консоли](https://console.cloud.yandex.ru/) Яндекс.Облака перейдите в нужную группу ресурсов.
 

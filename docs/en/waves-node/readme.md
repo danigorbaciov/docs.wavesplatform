@@ -27,6 +27,8 @@ Minimum requirements to run Waves Node:
 
 * The other way is to [download the latest version](https://github.com/wavesplatform/Waves/releases) of `waves.jar` and the required `.conf` configuration file \(for mainnet or testnet\) to any folder, for example `~/waves`. Follow the steps described in [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article for details about node installation and activation of the node features.
 
+* You can also run Waves node in Yandex.Cloud. For details, see [Running Waves Node in Yandex.Cloud](/en/waves-node/running-waves-node-in-yandex-cloud) article.
+
 ### Getting Actual Blockchain
 
 After installing a node, you will need to get the blockchain database, using one of the methods described in [Options for Getting Actual Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article.

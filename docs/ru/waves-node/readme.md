@@ -26,7 +26,7 @@
 * Наиболее просто способ запустить ноду — использовать [Waves Docker container](en/waves-node/waves-node-in-docker). Достаточно одной команды, чтобы включить все или изменить настройки ноды.
 * Другой способ — скачать [последнюю версию](https://github.com/wavesplatform/Waves/releases) `waves.jar` и конфигурационный файл для Mainnet или Testnet в любую папку, например `~/waves`. Воспользуйтесь [инструкцией по установке ноды](en/waves-node/how-to-install-a-node/how-to-install-a-node) для вашей операционной системы.
 
-> Ознакомьтесь с [порядком активации](en/waves-node/how-to-install-a-node/how-to-install-a-node) новых функциональностей.
+* Также возможно запустить ноду в Yandex.Cloud. Процесс запуска подробно описан в статье [Запуск Waves Node в Yandex.Cloud](/en/waves-node/running-waves-node-in-yandex-cloud) article.
 
 ### Получение актуального блокчейна
 

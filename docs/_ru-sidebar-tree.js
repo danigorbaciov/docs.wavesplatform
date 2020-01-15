@@ -507,7 +507,7 @@ module.exports = {
           path: nodePath + 'how-to-build-and-test-a-node',
         },
 		{
-          title: 'Запуск ноды Waves в Яндекс.Облаке',
+          title: 'Запуск ноды Waves в Yandex.Cloud',
           path: nodePath + 'running-waves-node-in-yandex-cloud',
         },
       ],
