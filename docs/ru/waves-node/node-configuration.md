@@ -1,7 +1,7 @@
 # Конфигурация ноды
 
-The **node configuration file** is a settings file of a [node](/en/blockchain/node).
-An [example](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf) of the default node configuration file is available on Github.
+**Файл конфигурации ноды** это в котором содержатся настройки [ноды](/ru/blockchain/node).
+[Пример](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf) стандартного файла конфигурауии ноды доступен для скачивания на Github.
 
 > После обновления до версии 1.0.2 обратите внимание: если файл `/etc/waves/waves.conf` был изначально скопирован из шаблона, то нужно проверить, что в параметре `waves.directory` указана правильная папка. Если этой опции нет в конфигурационном файле, будет использоваться папка по умолчанию.
 
@@ -9,21 +9,21 @@ An [example](https://github.com/wavesplatform/Waves/blob/master/node/src/main/re
 
 В системе конфигурации ноды Waves применяется формат HOCON (Human-Optimized Config Object Notation). Подробное описание HOCON доступно по ссылке [Official HOCON documentation](https://github.com/typesafehub/config/blob/master/HOCON). Преимущества HOCON — это простой синтаксис и возможность использовать комментарии.
 
-## Sections of the configuration file
+## Секции файла конфигурации
 
-| # | Configuration section | Description |
+| # | Секция | Описание |
 | :--- | :--- | :--- |
-| 1 | Blockchain | Settings of [blockchain](/en/blockchain/blockchain) |
-| 2 | Extensions | Settings of [extensions](/en/waves-node/extensions) |
-| 3 | Features | Settings of [features](/en/waves-node/features/feature) |
+| 1 | Blockchain | Настройки [blockchain](/ru/blockchain/blockchain) |
+| 2 | Extensions | Настройки [extensions](/ru/waves-node/extensions) |
+| 3 | Features | Настройки [features](/ru/waves-node/features/feature) |
 | 4 | Nodes synchronization | |
 | 5 | Non-aggregated data | |
 | 6 | NTP server | |
 | 7 | Miner | |
 | 8 | Performance metrics | |
 | 9 | P2P network   | |
-| 10 | REST API | Settings of [Node API](/en/waves-node/node-api) |
-| 11 | Rewards | Settings of desired mining reward. See [Mining reward](/en/blockchain/mining/mining-reward) for more information. |
+| 10 | REST API | Настройки [Node API](/en/waves-node/node-api) |
+| 11 | Rewards | Настройки награды за майнинг. Подробнее в статье [Mining reward](/ru/blockchain/mining/mining-reward). |
 | 12 | Unverified transactions pool | |
 | 13 | Wallet | |
 | 14 | Waves | | |
