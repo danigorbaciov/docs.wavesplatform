@@ -647,10 +647,6 @@ module.exports = {
       ],
     },
     {
-      title: 'Node Configuration File',
-      path: nodePath + 'node-configuration-file',
-    },
-    {
       title: 'Node Configuration',
       path: nodePath + 'node-configuration',
     },

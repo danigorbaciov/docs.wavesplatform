@@ -1,10 +1,32 @@
 # Конфигурация ноды
 
+The **node configuration file** is a settings file of a [node](/en/blockchain/node).
+An [example](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf) of the default node configuration file is available on Github.
+
 > После обновления до версии 1.0.2 обратите внимание: если файл `/etc/waves/waves.conf` был изначально скопирован из шаблона, то нужно проверить, что в параметре `waves.directory` указана правильная папка. Если этой опции нет в конфигурационном файле, будет использоваться папка по умолчанию.
 
 ## Формат конфигурации
 
 В системе конфигурации ноды Waves применяется формат HOCON (Human-Optimized Config Object Notation). Подробное описание HOCON доступно по ссылке [Official HOCON documentation](https://github.com/typesafehub/config/blob/master/HOCON). Преимущества HOCON — это простой синтаксис и возможность использовать комментарии.
+
+## Sections of the configuration file
+
+| # | Configuration section | Description |
+| :--- | :--- | :--- |
+| 1 | Blockchain | Settings of [blockchain](/en/blockchain/blockchain) |
+| 2 | Extensions | Settings of [extensions](/en/waves-node/extensions) |
+| 3 | Features | Settings of [features](/en/waves-node/features/feature) |
+| 4 | Nodes synchronization | |
+| 5 | Non-aggregated data | |
+| 6 | NTP server | |
+| 7 | Miner | |
+| 8 | Performance metrics | |
+| 9 | P2P network   | |
+| 10 | REST API | Settings of [Node API](/en/waves-node/node-api) |
+| 11 | Rewards | Settings of desired mining reward. See [Mining reward](/en/blockchain/mining/mining-reward) for more information. |
+| 12 | Unverified transactions pool | |
+| 13 | Wallet | |
+| 14 | Waves | | |
 
 ## Стандартные файлы конфигурации и ручные настройки
 
