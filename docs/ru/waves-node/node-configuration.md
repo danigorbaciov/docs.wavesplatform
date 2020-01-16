@@ -23,7 +23,7 @@
 | 8 | Performance metrics | |
 | 9 | P2P network   | |
 | 10 | REST API | Настройки [Node API](/en/waves-node/node-api) |
-| 11 | Rewards | Настройки награды за майнинг. Подробнее в статье [Mining reward](/ru/blockchain/mining/mining-reward). |
+| 11 | Rewards | Настройки вознаграждения за майнинг. Подробнее в статье [Mining reward](/ru/blockchain/mining/mining-reward). |
 | 12 | Unverified transactions pool | |
 | 13 | Wallet | |
 | 14 | Waves | | |

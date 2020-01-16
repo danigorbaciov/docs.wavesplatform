@@ -7,13 +7,13 @@ sidebarDepth: 2
 The **node configuration file** is a settings file of a [node](/en/blockchain/node).
 An [example](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf) of the default node configuration file is available on Github.
 
-> After upgrading to version 1.0.2 please note if your `/etc/waves/waves.conf` was originally copied from a template, you may need to assure that waves.directory points to the correct directory. If this option doesn't exist in the config, default directory will be used.
+> After upgrading to version 1.0.2 please note if your `/etc/waves/waves.conf` was originally copied from a template, make sure that waves.directory points to the correct directory. If this option doesn't exist in the config, default directory will be used.
 
 ## Configuration Format
 
 The configuration system of Waves Node uses HOCON format. HOCON stands for Human-Optimized Config Object Notation. The complete description of HOCON could be found in the [Official HOCON documentation](https://github.com/typesafehub/config/blob/master/HOCON). The advantages of HOCON are simple syntax and ability to use comments.
 
-## Sections of the configuration file
+## Sections of the Configuration File
 
 | # | Configuration section | Description |
 | :--- | :--- | :--- |
@@ -38,31 +38,30 @@ The configuration system of Waves Node uses HOCON format. HOCON stands for Human
 
 Complete default Waves Node configuration file which is embedded into jar-file can be found here: <https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf>.
 
-### MainNet and TestNet config in DEB-packages
+### MainNet and TestNet Config in DEB-packages
 
 If you use DEB-packages to install a node, they also contain configuration files which override some parameters specific to the network:
 
 * <https://github.com/wavesplatform/Waves/blob/master/node/waves-mainnet.conf>
 * <https://github.com/wavesplatform/Waves/blob/master/node/waves-testnet.conf>
 
-### Overriding parameters when running JAR-file
+### Overriding Parameters When Running JAR-file
 
-If you run JAR file it's recommended to override default parameters by passing a path to config file as the command line parameter then starting Waves Node application.
+If you run JAR file it is recommended to override default parameters by passing a path to config file as the command line parameter then starting Waves Node application.
 
-```
+```bash
 java -jar waves-all-0.13.3.jar waves.conf
 ```
 
-Typically this file should contain you node's unique characteristics (ip, name, keys, etc...) and network-specific parameters similar to waves-mainnet or waves-testnet configs from previous sections (files shipped with DEB packages).
-
+Typically this file should contain your node's unique characteristics (ip, name, keys, etc...) and network-specific parameters similar to waves-mainnet or waves-testnet configs from previous sections (files shipped with DEB packages).
 
 ## Configuration Sections
 
-### Waves configuration section
+### Waves Configuration Section
 
 Root configuration section `waves` holds essential application parameters and other configuration subsections.
 
-Using parameter `directory` it is possible to set a path to the base application directory. It is possible to use environment variables to set configuration parameters. For example, by default, the base directory constructed relative to the user’s `HOME` environment variable. Please, do not enclose environment variables references in quotes, in this case, they will be handled as strings and won’t be resolved.
+The `directory` parameter allows to set a path to the base application directory. It is possible to use environment variables to set configuration parameters. For example, by default, the base directory constructed relative to the user’s `HOME` environment variable. Please, do not enclose environment variables references in quotes, in this case, they will be handled as strings and won’t be resolved.
 
 Make sure the defined directory has a correct owner set: `waves` for mainnet or `waves-testnet` for testnet.
 
@@ -79,81 +78,83 @@ By default, depending on the operating system and the type of blockchain, the fo
 
 Parameter `data-directory` sets the location of LevelDB database folder. In this database stored blockchain data and state.
 
-Using parameter `leveldb-cache-size` you can set the size of theinternal cache of LevelDB database.
+Use `leveldb-cache-size` parameter to set the size of the internal cache of LevelDB database.
 
 **Note:** The number of bytes should be given to set the cache size parameter. But you can use size units: <ul><li>K - for kilobyte</li><li>M - for megabytes</li><li>G - for gigabytes</li></ul>
 
-### Network settings
+### Network Settings
 
 In `network` section P2P network related settings could be set.
 
 Use `file` parameter to set the location of peers database. In this database node stores lists of known and blacklisted peers. By default, the path is resolved with regard to base `directory` from `waves` section.
 
-Using `declared-address` parameter you can set the external IP address and port number of the node. It’s necessary to work behind NAT in most cloud hosting, where the machine does not interface directly with the external address. If you do not specify it, then your node connects to the P2P network, but it won’t listen to incoming connections so other nodes will not be able to connect. Other nodes are connected to your node using these data. The format of this parameter is "\[ip-address\]:\[port\]".
+Use `declared-address` parameter to set the external IP address and port number of the node. It’s necessary to work behind NAT in most cloud hosting, where the machine does not interface directly with the external address. If you do not specify it, then your node connects to the P2P network, but it won’t listen to incoming connections so other nodes will not be able to connect. Other nodes are connected to your node using these data. The format of this parameter is "\[ip-address\]:\[port\]".
 
-Using parameter `bind-address` you can set the IP address of local network interface on which Waves Node will accept incoming connections. By default, node binds to `0.0.0.0` that means that it will listen on all available network adapters.
+Use `bind-address` parameter to set the IP address of local network interface on which Waves Node will accept incoming connections. By default, node binds to `0.0.0.0` that means that it will listen on all available network adapters.
 
 Use `port` parameter to set the network port number to which other Waves nodes will connect. Check that the port is reachable from outside otherwise, your node will connect to P2P network only using outgoing connections. If this the port is taken by other application, your node won’t start.
 
-Parameter `node-name` could be used to set the name of your node visible to other participants of the P2P network. The name transmitted during initial handshake. In the default configuration, this parameter is commented out, which leads to random name generation.
+`node-name` parameter can be used to set the name of your node visible to other participants of the P2P network. The name transmitted during initial handshake. In the default configuration, this parameter is commented out, which leads to random name generation.
 
-Parameter `nonce` is sent during a handshake. By default, it’s not set and nonce will be generated randomly. This value is used to distinguish nodes connected from one IP address.
+`nonce` parameter is sent during a handshake. By default, it’s not set and nonce will be generated randomly. This value is used to distinguish nodes connected from one IP address.
 
 The `known-peers` parameter stores the list of bootstrap nodes to which your node will establish outgoing connections while initializing. By default it set to Testnet nodes.
 
-The `peers-data-residence-time` parameter could be used to set the period of time during which the node stores information about external peer since last communication session with it.
+The `peers-data-residence-time` parameter can be used to set the period of time during which the node stores information about external peer since last communication session with it.
 
 **Note:** All time span parameters are set in milliseconds. But duration units can be used to shorten the value. Supported units are: <ul><li>s - second, seconds</li><li>m - muinute, minutes</li><li>h - hour, hours</li><li>d - day, days</li></ul> For usage examples see the default configuration file above.
 
-
-Parameter `black-list-residence-time` could be used to set the period of time for which information about external peer stays in the blacklist.
+`black-list-residence-time` parameter can be used to set the period of time for which information about external peer stays in the blacklist.
 
 Use `max-inbound-connections` parameter to set the maximum number of simultaneous inbound connections handled by the node.
 
 Use `max-outbound-connections` parameter to limit the number of outgoing network connections.
 
-Using `max-single-host-connections` parameter you can specify the allowed number of network connections made from single IP address.
+Use `max-single-host-connections` parameter to specify the allowed number of network connections made from single IP address.
 
-Parameter `connection-timeout` could be used to change the network communication timeout.
+`connection-timeout` parameter can be used to change the network communication timeout.
 
-Parameter `outbound-buffer-size`is used to set the network buffer size. Better leave the default value, incorrect buffer size could lead to node malfunction.
+`outbound-buffer-size` parameter is used to set the network buffer size. Better leave the default value, incorrect buffer size could lead to node malfunction.
 
-Parameter `max-unverified-peers` could be used to change the maximum size of the buffer to store information about peers during handshake process.
+`max-unverified-peers` parameter can be used to change the maximum size of the buffer to store information about peers during handshake process.
 
 Use `enable-peers-exchange` parameter to enable requesting and sending the information about peers.
 
-Parameter `enable-blacklisting` allows to enable or disable blacklisting of peers.
+`enable-blacklisting` parameter allows to enable or disable blacklisting of peers.
 
 Use `peers-broadcast-interval` parameter to set the period of time between broadcasts of known peers list to other nodes.
 
-Using `handshake-timeout` parameter it is possible to set time period to wait for reply during handshake. In case of no reply the peer will be blacklisted.
+Use `handshake-timeout` parameter to set time period to wait for reply during handshake. In case of no reply the peer will be blacklisted.
 
-In `upnp` section you can set the UPnP settings. Actually, those settings are useful only if you ran your Waves node on the home network where the node could ask your router to establish a tunnel. By default, this functionality is disabled. Use`enable`parameter of`upnp`to enable this functionality.
+In `upnp` section you can set the UPnP settings. Actually, those settings are useful only if you run your Waves node on the home network where the node can ask your router to establish a tunnel. By default, this functionality is disabled. Use `enable` parameter of `upnp` to enable this functionality.
 
-In `traffic-logger` section you can enable or disable logging of some of incoming or outgoing network messages. Network messages are logged at TRACE level.
+In `traffic-logger` section you can enable or disable logging of some of the incoming or outgoing network messages. Network messages are logged at TRACE level.
 
-### Wallet settings
+### Wallet Settings
 
 In `wallet` section you can configure wallet built in Waves node.
 
 Use `file` parameter to set the path to the wallet file. By default, the path to the file is calculated relative to the base application directory.
 
-Parameter `password` could be used to set the password string to protect the wallet file.
+`password` parameter is used to set the password string to protect the wallet file.
 
-Using `seed` parameter you could recreate an existing wallet on a new node. Provide the BASE58 string of your seed here. If you don’t have any existing wallet comment out this parameter and start the node. During the first run, the application will create a new wallet with a random seed for you. In this case, the seed will be displayed in the application log. If you miss it or if you don’t want to check the log files, it will also be available in REST API using the wallet/seed method.
+`seed` parameter is used to recreate an existing wallet on a new node. Provide the BASE58 string of your seed here. If you don’t have any existing wallet, comment out this parameter and start the node. During the first run, the application will create a new wallet with a random seed for you. In this case, the seed will be displayed in the application log. If you miss it or if you don’t want to check the log files, it will also be available in REST API using the wallet/seed method.
 
-**Warning:** The wallet is a critical part of your node. Better to create its file in a safe and protected location. Don’t forget to backup your wallet’s file. It’s recommended to remove the seed from the configuration file immediately after the start of the node. If an attacker gains access to this seed string, he has access to all your funds on all your addresses!
+**Warning:** The wallet is a critical part of your node. Better to create its file in a safe and protected location. Don’t forget to backup your wallet’s file. It’s recommended to remove the seed from the configuration file immediately after the start of the node. If an attacker gains access to this seed string, he has the access to all your funds on all your addresses!
 
-#### Update wallet's settings
+#### Update Wallet's Settings
 
 If you want to run the node with another wallet, use one of the following instuctions:
+
 * Replace `wallet.dat` file with the file which contains SEED phrase of another wallet.
+
 OR
+
 * Delete/copy to another location your `wallet.dat` file for making directory `/wallet` empty. Then update SEED in config file.
 
 Restart the node. After restarting the node will use another wallet settings.
 
-### Blockchain settings
+### Blockchain Settings
 
 Here you can select the blockchain type or create your own blockchain.
 
@@ -161,43 +162,43 @@ Use parameter `max-transactions-per-block-diff` to set the number of transaction
 
 You can change the number of blocks stored in memory using parameter `min-blocks-in-memory`.
 
-Using `type` parameter you can select the blockchain type. Three choices are available: MAINNET, TESTNET, STAGENET, and CUSTOM. For MAINNET or TESTNET or STAGENET types, parameters of blockchain are built in the application so you don’t have to configure them. But if you select CUSTOM blockchain type you have to provide the `custom` configuration section \(which is commented out in the example\).
+Using `type` parameter you can select the blockchain type. Three choices are available: MAINNET, TESTNET, STAGENET, and CUSTOM. For MAINNET or TESTNET or STAGENET types, parameters of blockchain are built in the application so you don’t have to configure them. But if you select CUSTOM blockchain type, you have to provide the `custom` configuration section \(which is commented out in the example\).
 
-#### Configuring custom blockchain
+#### Configuring Custom Blockchain
 
-Use parameter `address-scheme-character` in section `custom` to set the address feature character. This character used while building an address and also passed over a network during a handshake. The latter allow nodes not connect to the nodes with other blockchains.
+Use `address-scheme-character` parameter in `custom` section to set the address feature character. This character used while building an address and also passed over a network during a handshake. The latter allow nodes not to connect to the nodes with other blockchains.
 
-`functionality` section allows you to set the timestamps of activation of different blockchain validations. It’s better to set all functionality settings to 0 to have a blockchain with all validations active.
+`functionality` section allows to set the timestamps of activation of different blockchain validations. It is better to set all functionality settings to 0 to have a blockchain with all validations active.
 
 In `genesis` section describe the first \(genesis\) block of your custom blockchain.
 
-Use `block-timestamp` parameter to set the date of creation of genesis block. Using parameter `timestamp` it is possible to set time of creation for genesis transactions.
+Use `block-timestamp` parameter to set the date of creation of genesis block. Use `timestamp` parameter to set time of creation for genesis transactions.
 
-Using `signature` parameter you can set the signature of genesis block.
+Use `signature` parameter to set the signature of genesis block.
 
-In `initial-balance` parameter it’s possible to set the total amount of coins. This value should be given in the smallest units of cryptocurrency.
+`initial-balance` parameter allows to set the total amount of coins. This value should be given in the smallest units of cryptocurrency.
 
-Using `initial-base-target` parameter it’s possible adjust the speed of block generation in the very begging of your custom blockchain.
+Use `initial-base-target` parameter to adjust the speed of block generation in the very beginning of your custom blockchain.
 
-Using `average-block-delay` parameter you can set the speed of block generation in your blockchain. This is a target period of time between blocks. In reality delays between blocks could vary.
+Use `average-block-delay` parameter to set the speed of block generation in your blockchain. This is a target period of time between blocks. In reality the delays between blocks may vary.
 
-In `transactions` parameter you should provide the list of first transactions. Each transaction is described by recipient’s address \(as BASE58 string\) and amount. You have to distribute all initial balance to one or more addresses in genesis block. If you failed to do so, the genesis block will be considered as incorrect and the application won’t start.
+`transactions` parameter allows to provide the list of first transactions. Each transaction is described by recipient’s address \(as BASE58 string\) and amount. You have to distribute all initial balance to one or more addresses in genesis block. If you failed to do so, the genesis block will be considered as incorrect and the application won’t start.
 
-### Miner settings
+### Miner Settings
 
 In section `miner` it is possible to configure parameters of the new blocks generator.
 
 Use `enable` parameter to enable or disable block generation on the node. By default, it’s enabled, but if you disable it your node won’t try to generate new blocks \(won’t mine\).
 
-Use `quorum` parameter to set the minimum required number of connected peers to enable and start mining of new blocks. It defaults to 1, so your node will start mining as soon as it connects to the first peer in the P2P network. Setting this parameter to 0 will enable off-line generation.
+Use `quorum` parameter to set the minimum required number of connected peers to enable and start mining of new blocks. By default it is set to 1, so your node will start mining as soon as it connects to the first peer in the P2P network. Setting this parameter to 0 will enable off-line generation.
 
-Using `interval-after-last-block-then-generation-is-allowed` parameter you tune your node’s blocks download and generation behavior. By default, it set to 1 day, which means that your node won’t start block generation until it has the last block in the local blockchain not older than 1 day. So, using this parameter you order you node to actualize the blockchain before starting to generate new blocks. Actually, it works only after long node shutdowns.
+Use `interval-after-last-block-then-generation-is-allowed` parameter to tune your node’s blocks download and generation behavior. By default, it set to 1 day, which means that your node won’t start block generation until it has the last block in the local blockchain not older than 1 day. So, using this parameter you tell your node to actualize the blockchain before starting to generate new blocks. Actually, it works only after long node shutdowns.
 
-### REST API settings
+### REST API Settings
 
-The **REST API section** is a section in the node configuration file with settings of a [node API](/en/waves-node/node-api).
+The **REST API Section** is a section in the node configuration file with settings of a [node API](/en/waves-node/node-api).
 
-#### parameters
+#### Parameters
 
 | # | Name | Description | Default value |
 | :--- | :--- | :--- | :--- |
@@ -211,7 +212,7 @@ The **REST API section** is a section in the node configuration file with settin
 
 This is an example for signing a transaction that already exists in the wallet of the node owner as a CURL command:
 
-```
+```bash
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Key: YOUR UNIQUE API KEY'
 -d '{ \
 amount: 5800000000, \
@@ -227,7 +228,7 @@ timestamp: 1568020044350 \
 }' 'http://nodes.wavesnodes.com/transactions/sign'
 ```
 
-### Synchronization settings
+### Synchronization Settings
 
 In `synchronization` section it is possible to tune different aspects of node synchronization process.
 
@@ -247,7 +248,7 @@ In `history-replier` subsection you can configure the number of last blocks and 
 
 In `micro-block-synchronizer` subsection you could tune various parameters of Waves-NG protocol.
 
-### UTX pool settings
+### UTX Pool Settings
 
 `max-size` parameter allows to set the size of unconfirmed transactions pool (both scripted and non-scripted).
 
@@ -256,7 +257,7 @@ In `micro-block-synchronizer` subsection you could tune various parameters of Wa
 `max-transaction-age` parameter allows to set the maximum age of transactions allowed to UTX.
 
 <a id="rewards"></a>
-### Rewards settings
+### Rewards Settings
 
 In this section, you can set the desired reward size using `desired` parameter. The setting value is specified in WAVELETs.
 
