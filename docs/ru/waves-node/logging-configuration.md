@@ -2,7 +2,7 @@
 
 ## Про Framework
 
-Ноды Waves используют [logback](https://logback.qos.ch/documentation.html) framework для логирования. Нода поставляется с готовой [конфигурацией логирования](https://logback.qos.ch/manual/configuration.html), отбразец стандартного файла `logback.xml` можно найти [тут](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/logback.xml).
+Ноды Waves используют [logback framework](https://logback.qos.ch/documentation.html) для логирования. Нода поставляется с готовой [конфигурацией логирования](https://logback.qos.ch/manual/configuration.html), отбразец стандартного файла `logback.xml` можно найти [тут](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/logback.xml).
 
 Чтобы переопределить стандартные настройки файла `logback.xml` ноды, создайте свой `logback.xml` в папке `/etc/waves/`. Воспользуйтесь секцией [Конфигурация собственного Logback.xml](#own-logback) для настройки.
 
