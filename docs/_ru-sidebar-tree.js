@@ -567,6 +567,10 @@ module.exports = {
       path: nodePath + 'node-configuration',
     },
     {
+      title: 'Конфигурация логирования',
+      path: nodePath + 'logging-configuration',
+    },
+    {
       title: 'Ограничения API пула публичных нод',
       path: nodePath + 'api-limitations-of-the-pool-of-public-nodes',
     },
