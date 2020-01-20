@@ -1,6 +1,6 @@
 # Address
 
-An **address** is a unique identifier of an [account](/en/blockchain/account).
+**Address** is the unique identifier of an [account](/en/blockchain/account).
 
 The address allows a user to view account balance. [Tokens](/en/blockchain/token) can be sent to the address.
 
@@ -10,5 +10,6 @@ Each account has a _single_ address.
 
 One address can have several [aliases](/en/blockchain/account/alias).
 
-## Binary format
+## Binary Format
+
 See the page [Address binary format](/en/blockchain/binary-format/address-binary-format).
