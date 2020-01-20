@@ -1,4 +1,4 @@
-# About Waves blockchain
+# About Waves Blockchain
 
 This chapter contains overview of the Waves Platform main features, such as protocol, consensus, cryptography. 
 Review the articles to understand the value that blockchain offers.
