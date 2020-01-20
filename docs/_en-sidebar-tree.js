@@ -609,7 +609,11 @@ module.exports = {
       path: nodePath + 'how-to-rollback-a-node',
     },
     {
-      title: 'Waves Testnet',
+      title: 'How to work with node wallet',
+      path: nodePath + 'how-to-work-with-node-wallet',
+    },
+    {
+      title: 'Joining Testnet',
       path: nodePath + 'joining-testnet',
     },
     {
