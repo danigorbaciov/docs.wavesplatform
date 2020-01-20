@@ -1,10 +1,11 @@
-# Account balance
+# Account Balance
 
-An **account balance** is the amount of the [token](/en/blockchain/token) that is stored on the [account](/en/blockchain/account).
+**Account balance** is the amount of the [token](/en/blockchain/token) that is stored on the [account](/en/blockchain/account).
 
 One account can store different tokens in different amounts. For example, an account can have 50 [WAVES](/en/blockchain/token/waves) and 200 [WCTs](/en/blockchain/token/wct) at the same time. The amount of the Y token on the account is called the **account balance in Y token**. If there is no Y token on the account, it is said that the **account balance in Y token is equal to zero**.
 
-## Account balance in WAVES token
+## Account Balance in WAVES Token
+
 There are four balances in WAVES token:
 
 * regular
@@ -20,25 +21,25 @@ To explain the effective and available balances, we will introduce the following
 
 `A` — regular balance,
 
-`L` — the amount of WAVES which account leased to other accounts,
+`L` — the amount of WAVES which the account leased to other accounts,
 
 `R`— the amount of WAVES which were leased to the account by other accounts.
 
 The **effective balance** is:
 
-```
+```bash
 A - L + R
 ```
 
 The **available balance** is:
 
-```
+```bash
 A - L
 ```
 
 The **generating balance** is the minimum value of the effective balance during the last 1000 blocks.
 
-## Top up and view account balance
+## Top Up and View Account Balance
 
 You can buy and sell tokens using [Waves.Exchange](https://waves.exchange/) or at one of the [centralized exchanges](https://coinmarketcap.com/currencies/waves/#markets).
 
@@ -52,18 +53,19 @@ You can view the list of tokens on account in [Waves Explorer](https://wavesexpl
 
 ![](./_assets/tokens.png)
 
-## Retrieving account balance using Node API
+## Retrieving Account Balance Using Node API
+
 You can get account balance in WAVES by using the Node API request.
 
 Example of the request:
 
-```
+```bash
 curl https://nodes.wavesplatform.com/addresses/balance/details/<account address>
 ```
 
 Example of the response:
 
-```
+```bash
 {
   "address": "3PMCn1EHq4WrsfUazezyYu23H1gHKvuffER",
   "regular": 6086358429,
