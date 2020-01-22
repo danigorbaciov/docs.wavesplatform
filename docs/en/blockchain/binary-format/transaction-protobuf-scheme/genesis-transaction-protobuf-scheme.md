@@ -2,7 +2,7 @@
 
 > protobuf-schemas/proto/waves/transaction.proto
 
-```
+```bash
 // Transactions
 syntax = "proto3";
 package waves;

@@ -1,4 +1,4 @@
-# Stage network
+# Stage Network
 
 The **stage network** or the **stagenet** is a Waves blockchain that is used for testing experimental functionality.
 

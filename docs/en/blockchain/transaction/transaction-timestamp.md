@@ -1,4 +1,4 @@
-# Transaction timestamp
+# Transaction Timestamp
 
 **Transaction timestamp** is a time of signing of transaction prior to sending it to the [blockchain network](/blockchain/blockchain-network.md), specified by the sender.
 

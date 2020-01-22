@@ -1,6 +1,6 @@
 # Transaction binary format
 
-A **transaction binary format** is a set of fields of a [transaction](/en/blockchain/transaction).
+**Transaction binary format** is a set of fields of a [transaction](/en/blockchain/transaction).
 
 Transactions of different [types](/en/blockchain/transaction-type) have different binary formats. Transactions of the same type, but of different [versions](/en/blockchain/transaction/transaction-version), also have different binary formats.
 

@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# Waves-NG solution
+# Waves-NG Solution
 
 ## 1. Reasoning
 
@@ -11,7 +11,7 @@ The maximum rate of transactions in blockchain systems is limited by the choice 
 * The block interval defines the average amount of time that passes between the creation of two blocks. If we reduce this time, forks will appear more frequently, which will lead to either non-resolved forks or to decreased throughput since a considerable amount of time would be spent on resolving these forks.
 * Larger blocks lead to huge network usage spikes during block propagation, which in turn will lead to throughput problems and huge forks.
 
-**Note.** Find How Waves-NG Protocol works [**here**](/en/blockchain/waves-protocol/waves-ng-protocol).
+**Note.** Waves-NG Protocol is explained [**here**](/en/blockchain/waves-protocol/waves-ng-protocol).
 
 ### 1.1 Waves-NG Solution With Technical Details
 
@@ -70,5 +70,5 @@ The following miner parameters can be tuned\(though it's best not to change them
 ## 5. API changes
 
 * Upon applying every microblock, last block gets changed, which means`/blocks/last`and`/blocks/at/...`will reflect that.
-* `/peers/blacklisted`now expose ban reason, one can clear a node's blacklist via`/peers/clearblacklist`
-* `/debug/`and`/consensus/`section are expanded, \_stateHash \_doesn't take \_liquid block \_into consideration.
+* `/peers/blacklisted` now expose ban reason, one can clear a node's blacklist via`/peers/clearblacklist`
+* `/debug/` and `/consensus/` section are expanded, \_stateHash \_doesn't take \_liquid block \_into consideration.

@@ -1,6 +1,6 @@
 # Block
 
-A **block** is a link in the chain of the [blockchain](/en/blockchain/blockchain).
+**Block** is a link in the chain of the [blockchain](/en/blockchain/blockchain).
 
 Block contains [transactions](/en/blockchain/transaction). The number of transactions inside of one block varies from 0 to 6000 inclusive.
 

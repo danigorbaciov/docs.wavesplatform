@@ -1,8 +1,8 @@
-# Transaction fee
+# Transaction Fee
 
 A **transaction fee** is a fee that an [account](/en/blockchain/account) owner pays to send a [transaction](/en/blockchain/transaction).
 
-A sender can specify any amount of fee but not less than a certain amount. The larger the fee is, the quicker the transaction will be added to the new [block](/en/blockchain/block).
+A sender can specify any amount of fee but not less than certain amount. The larger the fee is, the quicker the transaction will be added to the new [block](/en/blockchain/block).
 
 > If a [smart account](/en/blockchain/account/smart-account) transfers a [smart asset](/en/blockchain/token/smart-asset), then the fee doubles. <br>If a transaction is validated by an [account script](/en/ride/script/script-types/account-script) or an [asset script](/en/ride/script/script-types/asset-script), then the fee is increased by 0.004 WAVES
 

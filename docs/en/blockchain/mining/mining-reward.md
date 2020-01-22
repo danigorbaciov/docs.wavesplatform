@@ -1,12 +1,12 @@
-# Mining reward
+# Mining Reward
 
-The **mining reward** is a blockchain feature under which [miners](/en/blockchain/mining/miner) receive a fixed fee in [WAVES](/en/blockchain/token/waves) for each [generated block](/en/blockchain/block/block-generation).
+**Mining reward** is a blockchain feature under which [miners](/en/blockchain/mining/miner) receive fixed fee in [WAVES](/en/blockchain/token/waves) for each [generated block](/en/blockchain/block/block-generation).
 
 Mining rewards are paid due to the additional issue of the WAVES token.
 
 The community of miners can change the size of reward through [voting](#voting).
 
-## Current reward size
+## Current Reward Size
 
 You can view the current reward size by making a request to the [Node API](/en/waves-node/node-api). In response to the request, JSON is returned, the value of the `currentReward` field of which is the current mining reward size in [WAVELET](/en/blockchain/token/wavelet)s.
 
@@ -38,7 +38,7 @@ Example of response:
 
 In the example above, the value of the JSON's `currentReward` field is 600,000,000 WAVELETs — i.e. it's 6 WAVES.
 
-## The change of mining reward size over time
+## The Change of Mining Reward Size Over Time
 
 Every 100,000 blocks, i.e. approximately every 70 days, a new voting for the current reward size change begins among the miners.
 
@@ -57,7 +57,7 @@ When a [mining node](/en/blockchain/node/mining-node) generates a block, it writ
 
 During the voting time in 10,000 blocks, a single mining node can generate several blocks, therefore one mining node can vote several times. How often a mining node generates blocks is determined by the LPoS consensus.
 
-## How votes are counted
+## How Votes are Counted
 
 To count the votes, all 10,000 blocks generated during the voting period are inspected.
 
@@ -66,8 +66,6 @@ If either -1 or the value that is equal to the current reward size is recorded t
 If the value recorded to the block is greater than the current reward size, then miner votes for the current reward size increase; if the value is smaller — for the decrease.
 
 The mining reward is increased/decreased only if more than half of the 10,000 votes — i.e. 5,001 votes or more — were given for increase/decrease. The amount of the current reward is **increased/decreased by 0.5 WAVES** _step_.
-
-## Examples
 
 ### Example 1
 

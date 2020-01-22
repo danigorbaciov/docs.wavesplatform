@@ -1,3 +1,3 @@
-# Test network
+# Test Network
 
-The **test network** or the **testnet** is a Waves blockchain that is used for testing.
+The **test network** or the **testnet** is Waves blockchain that is used for testing.

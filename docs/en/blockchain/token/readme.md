@@ -4,4 +4,4 @@ A **token** or an **asset** is an object on the [blockchain](/en/blockchain/bloc
 
 A token can have value.
 
-Each token has a [unique ID](/en/blockchain/token/token-id).
+Each token has [unique ID](/en/blockchain/token/token-id).

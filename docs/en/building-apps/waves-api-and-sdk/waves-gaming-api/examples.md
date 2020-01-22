@@ -2,7 +2,7 @@
 
 [The Gaming SDK](https://github.com/wavesplatform/waves-games#readme) has many supported functions, you can see the [full description of all functions here](https://wavesplatform.github.io/waves-games/index.html).
 
-## 1. Create an item
+## 1. Create an Item
 
 ```js
 async function createItem()
@@ -14,7 +14,7 @@ console.log(item)
 }
 ```
 
-## 2. Get previously created item
+## 2. Get Previously Created Item
 
 ```js
 async function getItem() 
@@ -25,7 +25,7 @@ async function getItem()
 }
 ```
 
-## 3. Get all items created by address or game
+## 3. Get All Items Created By Address or Game
 
 It returns an item list issued by particular game creator.
 
@@ -49,6 +49,3 @@ async function changeAmount()
  items.changeAmount('6vq5YokeJUeCU3BCah65LTgiS5ESzjJdNurddY4ZDhcG', 10, false, seed)
 }
 ```
-
-
-

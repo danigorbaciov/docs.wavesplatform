@@ -1,8 +1,8 @@
-# Transaction type
+# Transaction Type
 
 Each [transaction](/en/blockchain/transaction) on the blockchain is of a specific type.
 
-## List of transaction types
+## List of Transaction Types
 
 | # | Transaction type | Transaction type ID |
 | :--- | :--- | :--- |

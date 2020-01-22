@@ -1,4 +1,4 @@
-# Client libraries
+# Client Libraries
 
 The list of libraries that are used to create, sign and send transactions, as well as to read data from the blockchain.
 

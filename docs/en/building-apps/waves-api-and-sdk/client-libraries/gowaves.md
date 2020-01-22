@@ -1,4 +1,5 @@
-# gowaves
+# Gowaves
+
 Go libraries and tools for Waves blockchain
 
 ## Tools

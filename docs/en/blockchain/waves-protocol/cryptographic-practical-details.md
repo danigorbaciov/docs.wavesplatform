@@ -1,8 +1,8 @@
-# Cryptographic practical details
+# Cryptographic Practical Details
 
 ## Description
 
-This section describes all the details of cryptographic algorithms which are used to: 
+This section describes details of cryptographic algorithms which are used to:
 
 1. Create private and public keys from seed.  
 2. Create addresses from public key.  
@@ -14,9 +14,9 @@ We use:
 2. `Curve25519` (ED25519 with X25519 keys) to create and verify signatures.  
 3. `Base58` to create the string form of bytes.
 
-**Note**: We use KECCAK which differs slightly than that assigned as the SHA-3 \(FIPS-202\).
+**Note**: We use KECCAK which slightly differs from that assigned as the SHA-3 \(FIPS-202\).
 
-## Bytes encoding Base58
+## Bytes Encoding Base58
 
 All arrays of bytes in the project are encoded by Base58 algorithm with Bitcoin alphabet to make it ease human readable \(text readability\).
 
@@ -24,26 +24,26 @@ All arrays of bytes in the project are encoded by Base58 algorithm with Bitcoin 
 
 The string `teststring` is coded into the bytes `[5, 83, 9, -20, 82, -65, 120, -11]`. The bytes `[1, 2, 3, 4, 5]` are coded into the string `7bWpTW`.
 
-## Creating a private key from a seed
+## Creating a Private Key From a Seed
 
-A seed string is a representation of entropy, from which you can re-create deterministically all the private keys for one wallet. It should be long enough so that the probability of selection is an unrealistic negligible.
+A seed string is a representation of entropy, from which you can re-create deterministically all the private keys for one wallet. It should be long enough so that the probability of selection is an unrealistically negligible.
 
-In fact, seed should be an array of bytes but for ease of memorization lite wallet uses [Brainwallet](https://en.bitcoin.it/wiki/Brainwallet), to ensure that the seed is made up of words and easy to write down or remember. The application takes the UTF-8 bytes of the string and uses them to create keys and addresses.
+In fact, the seed should be an array of bytes but for ease of memorization lite wallet uses [Brainwallet](https://en.bitcoin.it/wiki/Brainwallet), to ensure that the seed is made up of words and easy to write down or remember. The application takes the UTF-8 bytes of the string and uses them to create keys and addresses.
 
 For example, seed string `manage manual recall harvest series desert melt police rose hollow moral pledge kitten position add` after reading this string as UTF-8 bytes and encoding them to Base58, the string will be coded as `xrv7ffrv2A9g5pKSxt7gHGrPYJgRnsEMDyc4G7srbia6PhXYLDKVsDxnqsEqhAVbbko7N1tDyaSrWCZBoMyvdwaFNjWNPjKdcoZTKbKr2Vw9vu53Uf4dYpyWCyvfPbRskHfgt9q`.
 
-A seed string is involved with the creation of private keys. To create private key using the official web wallet or the node, to 4 bytes of int 'nonce' field \(big-endian representation\), which initially has a value of 0 and increases every time you create the new address, should be prepended to seed bytes. Then we use this array of bytes for calculate hash `keccak256(blake2b256(bytes))`. This resulting array of bytes we call `account seed`, from it you can definitely generate one private and public key pair. Then this bytes hash passed in the method of creating a pair of public and private key of `Curve25519` algorithm.
+A seed string is involved with the creation of private keys. To create private key using the official web wallet or the node, to 4 bytes of int 'nonce' field \(big-endian representation\), which initially has a value of 0 and increases every time you create the new address, should be prepended to seed bytes. Then we use this array of bytes to calculate hash `keccak256(blake2b256(bytes))`. The resulting array of bytes is called `account seed`, from it you can generate one private and public key pair. Then this bytes hash is passed in the method of creating a pair of public and private key of `Curve25519` algorithm.
 
 Waves uses `Curve25519`-`ED25519` signature with X25519 keys \(Montgomery form\), but most of embedded cryptography devices and libraries don't support X25519 keys.
 
-There're [libraries with conversion functions](https://download.libsodium.org/doc/advanced/ed25519-curve25519) from:
+There are [libraries with conversion functions](https://download.libsodium.org/doc/advanced/ed25519-curve25519) from:
 
 * ED25519 keys to X25519 \(Curve25519\) crypto\_sign\_ed25519\_pk\_to\_curve25519\(curve25519\_pk, ed25519\_pk\) for **public key.**
 * Crypto\_sign\_ed25519\_sk\_to\_curve25519\(curve25519\_sk, ed25519\_skpk\) for **private key**.
 
-For example, I use the ED25519 keys and the signature inside the Ledger application, then it need to convert the keys from the device to X25519 format using that function on the client side**and create the waves address from X25519 public key**. [There're an example of convertion libsodium ED25519 keys and signature to Curve25519](https://gist.github.com/Tolsi/d64fcb09db4ead75e5eeeab445284c93).
+For example, I use the ED25519 keys and the signature inside the Ledger application, then it needs to convert the keys from the device to X25519 format using that function on the client side **and create the waves address from X25519 public key**. [There is an example of convertion libsodium ED25519 keys and signature to Curve25519](https://gist.github.com/Tolsi/d64fcb09db4ead75e5eeeab445284c93).
 
-**NOTE: **Not all random 32 bytes can be used as private keys \(but any bytes of any size can be a seed\). The signature scheme for the ED25519 introduces restrictions on the keys, so create the keys only through the methods of the Curve25519 libraries and be sure to make a test of the ability to sign data with a private key and then check it with a public key, however obvious this test might seem**.**
+**NOTE**: Not all random 32 bytes can be used as private keys \(but any bytes of any size can be a seed\). The signature scheme for the ED25519 introduces restrictions on the keys, so create the keys only through the methods of the Curve25519 libraries and be sure to make a test of the ability to sign data with a private key and then check it with a public key, however obvious this test might seem.
 
 There are valid Curve25519 realizations for different languages:
 
@@ -58,67 +58,67 @@ Also some `Curve25519` libraries \(as the one used in our project\) have the `Sh
 
 Brainwallet seed string
 
-```
+```bash
 manage manual recall harvest series desert melt police rose hollow moral pledge kitten position add
 ```
 
 As UTF-8 bytes encoded
 
-```
+```bash
 xrv7ffrv2A9g5pKSxt7gHGrPYJgRnsEMDyc4G7srbia6PhXYLDKVsDxnqsEqhAVbbko7N1tDyaSrWCZBoMyvdwaFNjWNPjKdcoZTKbKr2Vw9vu53Uf4dYpyWCyvfPbRskHfgt9q
 ```
 
 Account seed bytes with nonce 0 before apply hash function in Base58
 
-```
+```bash
 1111xrv7ffrv2A9g5pKSxt7gHGrPYJgRnsEMDyc4G7srbia6PhXYLDKVsDxnqsEqhAVbbko7N1tDyaSrWCZBoMyvdwaFNjWNPjKdcoZTKbKr2Vw9vu53Uf4dYpyWCyvfPbRskHfgt9q
 ```
 
 blake2b256\(account seed bytes\)
 
-```
+```bash
 6sKMMHVLyCQN7Juih2e9tbSmeE5Hu7L8XtBRgowJQvU7
 ```
 
 Account seed \( keccak256\(blake2b256\(account seed bytes\)\) \)
 
-```
+```bash
 H4do9ZcPUASvtFJHvESapnxfmQ8tjBXMU7NtUARk9Jrf
 ```
 
 Account seed after `Sha256` hashing \(optional, if your library does not do it yourself\)
 
-```
+```bash
 49mgaSSVQw6tDoZrHSr9rFySgHHXwgQbCRwFssboVLWX
 ```
 
 Created private key
 
-```
+```bash
 3kMEhU5z3v8bmer1ERFUUhW58Dtuhyo9hE5vrhjqAWYT
 ```
 
 Created public key
 
-```
+```bash
 HBqhfdFASRQ5eBBpu2y6c6KKi1az6bMx8v1JxX4iW1Q8
 ```
 
-## Creating address from public key
+## Creating Address From Public Key
 
 Our network address obtained from the public key depends on the byte chainId ('T' for testnet, 'W' for mainnet, 'S' for stagenet), so different networks obtained a different address for a single seed (and hence public keys). Creating a byte addresses described in more detail [here](/en/blockchain/binary-format).
 
-Example
+**Example**:
 
 For public key
 
-```
+```bash
 HBqhfdFASRQ5eBBpu2y6c6KKi1az6bMx8v1JxX4iW1Q8
 ```
 
 in mainnet network \(chainId 'W'\) will be created this address
 
-```
+```bash
 3PPbMwqLtwBGcJrTA5whqJfY95GqnNnFMDX
 ```
 
@@ -126,11 +126,11 @@ in mainnet network \(chainId 'W'\) will be created this address
 
 `Curve25519` is used for all the signatures in the project.
 
-The process is as follows: create the special bytes for signing for transaction or block, you can find it [here](/en/blockchain/binary-format), then create a signature using these bytes and the private key bytes.
+The process is as follows: create the special bytes for signing, for transaction or block (you can find details [here](/en/blockchain/binary-format)), then create a signature using these bytes and the private key bytes.
 
-For the validation of signature is enough signature bytes, signed object bytes and the public key.
+For the validation of signature the signature bytes are enough, signed object bytes and the public key.
 
-Do not forget that there are many valid \(not unique!\) signatures for a one array of bytes \(block or transaction\). Also you should not assume that the id of block or transaction is unique. The collision can occur one day! They have already taken place for some weak keys.
+Do not forget that there are many valid \(not unique!\) signatures for one array of bytes \(block or transaction\). Also you should not assume that the id of block or transaction is unique. The collision can occur one day! They have already taken place for some weak keys.
 
 ### Example
 
@@ -166,18 +166,18 @@ Bytes:
 | 11 | Attachment's length \(N\) | Short | 85 \(117_\) \(149\*_\) | 2 | 4 | 15 |
 | 12 | Attachment's bytes | Bytes | 87 \(119_\) \(151\*_\) | N | \[1,2,3,4\] | 2VfUX |
 
-_**Total data bytes for sign:**_
+_**Total Data Bytes for Sign:**_
 
 `Ht7FtLJBrnukwWtywum4o1PbQSNyDWMgb4nXR5ZkV78krj9qVt17jz74XYSrKSTQe6wXuPdt3aCvmnF5hfjhnd1gyij36hN1zSDaiDg3TFi7c7RbXTHDDUbRgGajXci8PJB3iJM1tZvh8AL5wD4o4DCo1VJoKk2PUWX3cUydB7brxWGUxC6mPxKMdXefXwHeB4khwugbvcsPgk8F6YB`
 
-_**Signature of transaction data bytes**_ **\(one of an infinite number of valid signatures\):**
+_**Signature of Transaction Data Bytes**_ **\(one of an infinite number of valid signatures\):**
 
 `2mQvQFLQYJBe9ezj7YnAQFq7k9MxZstkrbcSKpLzv7vTxUfnbvWMUyyhJAc1u3vhkLqzQphKDecHcutUrhrHt22D`
 
-_**Total transaction bytes with signature:**_
+_**Total Transaction Bytes With Signature:**_
 
 `6zY3LYmrh981Qbzj7SRLQ2FP9EmXFpUTX9cA7bD5b7VSGmtoWxfpCrP4y5NPGou7XDYHx5oASPsUzB92aj3623SUpvc1xaaPjfLn6dCPVEa6SPjTbwvmDwMT8UVoAfdMwb7t4okLcURcZCFugf2Wc9tBGbVu7mgznLGLxooYiJmRQSeAACN8jYZVnUuXv4V7jrDJVXTFNCz1mYevnpA5RXAoehPRXKiBPJLnvVmV2Wae2TCNvweHGgknioZU6ZaixSCxM1YzY24Prv9qThszohojaWq4cRuRHwMAA5VUBvUs`
 
-## Calculating Transaction Id
+## Calculating Transaction ID
 
 Transaction Id is not stored in the transaction bytes and for most of transactions \(except Payment\) it can be easily calculated from the special bytes for signing using`blake2b256(bytes_for_signing)`. For Payment transaction Id is just the signature of this transaction.

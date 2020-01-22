@@ -1,6 +1,6 @@
-# Transaction proof
+# Transaction Proof
 
-A **transaction proof** is an array of bytes that is used to check the validity of a transaction.
+**Transaction proof** is an array of bytes that is used to check the validity of a transaction.
 
 An array of proofs can consist of several [transaction signatures](/en/blockchain/transaction/transaction-signature) (but not limited to only signatures).
 
@@ -10,7 +10,7 @@ Transactions with [data structures](/en/blockchain/binary-format/transaction-bin
 
 > The number of proofs in the array cannot exceed 8
 
-## The data structure of an array of `N` proofs
+## The Data Structure of an Array of `N` Proofs
 
 | Field order number | Field name | Field type | Field size in bytes | Field description |
 | :--- | :--- | :--- | :--- | :--- |

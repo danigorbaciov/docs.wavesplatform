@@ -1,4 +1,4 @@
-# Rating formula
+# Rating Formula
 
 The rating of a token is a daily weighted mean of individual rates of all users who have ever rated the token:
 

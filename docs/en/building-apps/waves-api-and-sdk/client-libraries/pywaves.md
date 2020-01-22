@@ -1,4 +1,5 @@
 # PyWaves
+
 PyWaves is an object-oriented Python interface to the Waves blockchain platform. The library is developing by community and open source. Latest documentation and examples can be found in [Github repository](https://github.com/PyWaves/PyWaves/). 
 
 ## Getting Started
@@ -16,7 +17,8 @@ The library utilizes classes to represent various Waves data structures:
 - pywaves.AssetPair
 - pywaves.Order
 
-#### Code Example
+### Code Example
+
 ```python
 import pywaves as pw
 
@@ -30,7 +32,6 @@ myAddress.sendAsset(otherAddress, myToken, 50)
 
 ```
 
+### Source Code
 
-
-### Source code
 [PyWaves Github repository](https://github.com/PyWaves/PyWaves/)

@@ -1,8 +1,8 @@
 # WavesRS
 
-A [Rust interface](https://github.com/petermz/WavesRs) to the Waves blockchain which can be used to create accounts and sign transactions
+[Rust interface](https://github.com/petermz/WavesRs) to the Waves blockchain which can be used to create accounts and sign transactions
 
-# Usage
+## Usage
 
 ```rust
 extern crate base58;
@@ -24,6 +24,3 @@ fn main() {
     println!("proofs are {:?}", ptx.proofs.iter().map(|p| p.to_base58()).collect::<Vec<String>>());
 }
 ```
-
-
-

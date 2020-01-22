@@ -1,5 +1,5 @@
-# Mining node
+# Mining Node
 
-A **mining node** is a [node](/en/blockchain/node) that does [mining](/en/blockchain/mining).
+**Mining node** is a [node](/en/blockchain/node) that does [mining](/en/blockchain/mining).
 
 Each mining node is a [validating node](/en/blockchain/node/validating-node).

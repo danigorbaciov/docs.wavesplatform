@@ -1,4 +1,4 @@
-# waves-transactions
+# Waves-transactions
 
 [![npm version](https://badge.fury.io/js/%40waves%2Fwaves-transactions.svg)](https://badge.fury.io/js/%40waves%2Fwaves-transactions)
 
@@ -26,7 +26,7 @@ This library is a set of transaction constructing functions:
 
 Check full documentation on [GitHub Pages](https://wavesplatform.github.io/waves-transactions/index.html).
 
-### Transactions
+## Transactions
 
 The idea is really simple - you create transaction and sign it from a minimal set of required params.  
 If you want to create Transfer transaction the minimum you need to provide is **amount** and **recipient** as defined in Transfer params:
@@ -66,7 +66,7 @@ Output will be a signed transfer transaction:
 You can also create transaction, but not sign it:
 
 ```javascript
-const unsignedTransferTx = transfer({ 
+const unsignedTransferTx = transfer({
   amount: 1,
   recipient: '3P6fVra21KmTfWHBdib45iYV6aFduh4WwC2',
   //senderPublicKey is required if you omit seed
@@ -102,6 +102,3 @@ So now there are two proofs:
   ]
 }
 ```
-
-
-

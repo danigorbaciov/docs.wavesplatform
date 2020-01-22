@@ -4,11 +4,11 @@ It's a [Java library](https://github.com/wavesplatform/WavesJ) for interacting w
 
 Supports node interaction, offline transaction signing, Matcher orders, and creating addresses and keys.
 
-## Using WavesJ in your project
+## Using WavesJ in Your Project
 
 Use the codes below to add WavesJ as a dependency for your project.
 
-##### Maven:
+### Maven:
 
 ```js
 <dependency>
@@ -18,15 +18,15 @@ Use the codes below to add WavesJ as a dependency for your project.
 </dependency>
 ```
 
-##### Gradle:
+### Gradle:
 
-```
+```bash
 compile group: 'com.wavesplatform', name: 'wavesj', version: '0.2'
 ```
 
-##### SBT:
+### SBT:
 
-```
+```bash
 libraryDependencies += "com.wavesplatform" % "wavesj" % "0.2"
 ```
 
@@ -90,7 +90,7 @@ System.out.printf("Filed order " + order.id);
 
 There are some examples under`src/examples/java`.
 
-## Building the library
+## Building the Library
 
 To build from scratch, run
 
@@ -99,4 +99,3 @@ mvn clean package
 ```
 
 The outputs are placed under the`target`directory.
-

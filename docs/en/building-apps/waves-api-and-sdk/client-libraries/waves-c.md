@@ -2,7 +2,7 @@
 
 C library for working with Waves.
 
-# Build
+## Build
 
 This package uses `cmake` 2.8+ for building and it depends on `openssl` dev package.
 
@@ -22,4 +22,3 @@ make
 ```
 
 For a quick start, we took the [bcdev's waves\_vanity source code](https://github.com/bcdev-/waves_vanity)source code as a basis.
-

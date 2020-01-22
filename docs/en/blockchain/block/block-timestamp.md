@@ -1,6 +1,6 @@
-# Block timestamp
+# Block Timestamp
 
-A **block timestamp** is a time of [block generation](/en/blockchain/block/block-generation).
+**Block timestamp** is the time of [block generation](/en/blockchain/block/block-generation).
 
 The time is specified in _milliseconds_ that have passed since the beginning of the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time).
 

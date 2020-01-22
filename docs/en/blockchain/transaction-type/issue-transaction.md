@@ -1,16 +1,16 @@
-# Issue transaction
+# Issue Transaction
 
-An **issue transaction** is a [transaction](/en/blockchain/transaction) that [issues token](/en/blockchain/token).
+**Issue transaction** is a [transaction](/en/blockchain/transaction) that [issues token](/en/blockchain/token).
 
 ## Issue of NFT <a id="nft"></a>
 
-The issue of an [NFT](/en/blockchain/token/non-fungible-token) is made by an issue transaction that has the "Amount" field equal 1, and the "Number of decimal places" and "Reissue flag" fields equal 0.
+The issue of an [NFT](/en/blockchain/token/non-fungible-token) is made by an issue transaction that has the "Amount" field equal to 1, and the "Number of decimal places" and "Reissue flag" fields equal tp 0.
 
 The fee for the issue of a single NFT is 0.001 [WAVES](/en/blockchain/token/waves).
 
 To issue NFTs you can use the [waves-games](https://www.npmjs.com/package/@waves/waves-games) npm package.
 
-### JSON representation of an issue transaction of an NFT
+### JSON Representation of NFT Issue Transaction
 
 ``` json
 {
@@ -37,6 +37,6 @@ To issue NFTs you can use the [waves-games](https://www.npmjs.com/package/@waves
 }
 ```
 
-## Binary format
+## Binary Format
 
-See the page [Issue transaction binary format](/en/blockchain/binary-format/transaction-binary-format/issue-transaction-binary-format).
+See [Issue transaction binary format](/en/blockchain/binary-format/transaction-binary-format/issue-transaction-binary-format).

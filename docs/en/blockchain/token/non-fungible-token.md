@@ -1,4 +1,4 @@
-# Non-fungible token
+# Non-fungible Token
 
 A **non-fungible token** or **NFT** is a special type of a [token](/en/blockchain/token), that represents some _unique_ object.
 
@@ -10,4 +10,4 @@ NFTs are most commonly used in games.
 
 ## Issue of NFT
 
-See the page [Issue transaction](/en/blockchain/transaction-type/issue-transaction#nft).
+See [Issue transaction](/en/blockchain/transaction-type/issue-transaction#nft).

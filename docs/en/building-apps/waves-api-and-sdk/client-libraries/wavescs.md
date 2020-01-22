@@ -1,4 +1,5 @@
 # WavesCS
+
 A C# library for interacting with the Waves blockchain
 
 Supports node interaction, offline transaction signing, Matcher orders, and creating addresses and keys.
@@ -6,13 +7,15 @@ Supports node interaction, offline transaction signing, Matcher orders, and crea
 ## Getting Started
 
 You can download **WavesCS.dll** from [releases](https://github.com/wavesplatform/WavesCS/releases) and add it to your project's References and in your code as:
-```
+
+```bash
 using WavesCS;
 ```
 
 If you want to work with full WavesCS project as contributor you should use also all crypto **.dll** from releases in your References.
 
 Target framework .NET Framework 4.5.1
+
 ## Documentation
 
 The library utilizes classes to represent various Waves data structures and encoding and serialization methods:
@@ -26,9 +29,10 @@ The library utilizes classes to represent various Waves data structures and enco
 - WavesCS.Base58
 - WavesCS.Utils
 
+### Code Example
 
-#### Code Example
 Code examples are in [WavesCSTests](https://github.com/wavesplatform/WavesCS/tree/master/WavesCSTests) project.
 
-### Source code
+### Source Code
+
 [WavesCS Github repository](https://github.com/wavesplatform/WavesCS)

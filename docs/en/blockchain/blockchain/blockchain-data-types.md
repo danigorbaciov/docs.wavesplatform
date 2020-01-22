@@ -1,4 +1,4 @@
-# Blockchain data types
+# Blockchain Data Types
 
 The **blockchain data types** are the data types that are used to describe [binary formats](/en/blockchain/binary-format) of blockchain entities.
 

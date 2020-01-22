@@ -15,15 +15,15 @@ Signer is a protocol for interacting with external Provider library that authent
 For now, you can use one of the following Providers:
 
 * [ProviderSeed](https://github.com/wavesplatform/provider-seed) developed by Waves team creates user account from SEED. ProviderSeed can be used at the app debugging stage.
-* [ProviderWeb](https://gitlab.waves.exchange/we-public/provider-web) developed by Waves.Exchange is the wallet software that encryptes and stores user's private key and SEED phrase, making sure that users' funds are protected from hackers and malicious websites.
+* [ProviderWeb](https://gitlab.waves.exchange/we-public/provider-web) developed by Waves.Exchange is the wallet software that encrypts and stores user private key and SEED phrase, making sure that the user funds are protected from hackers and malicious websites.
 
 You can also develop your own Provider, see [Provider Interface](#provider-interface).
 
-In code you can use [TypeScript types](https://github.com/wavesplatform/ts-types/blob/master/transactions/index.d.ts).
+In code you can use [TypeScript Types](https://github.com/wavesplatform/ts-types/blob/master/transactions/index.d.ts).
 
 ## Getting Started
 
-### 1. Signer and Provider library installation
+### 1. Signer and Provider Library Installation
 
 * To install Signer library use
 
@@ -43,7 +43,7 @@ In code you can use [TypeScript types](https://github.com/wavesplatform/ts-types
    npm i @waves.exchange/provider-web
    ```
 
-### 2. Library initialization
+### 2. Library Initialization
 
 Add library initialization to your app.
 
@@ -87,9 +87,9 @@ Add library initialization to your app.
 
 After that you will be able to use Signer features in the app.
 
-### 3. Basic example
+### 3. Basic Example
 
-Now your application is ready to work with Waves Platform. Let's test it by implementing basic functionality. For example, we could try to authenticate user, get his/her balances and transfer funds.
+Now your application is ready to work with Waves Platform. Let's test it by implementing basic functionality. For example, we could try to authenticate user, get user balances and transfer funds.
 
 ```js
 const user = await signer.login();
@@ -103,7 +103,7 @@ const [signedTransfer] = await signer
   .sign(); // Promise will resolved after user sign
 ```
 
-### More examples
+### More Examples
 
 See example of an app that implements the donate button: <https://github.com/vlzhr/crypto-donate>.
 
@@ -172,13 +172,13 @@ login();
 **Returns:**
 Promise of user data: address and public key.
 
-
 **Usage:**
+
 ```ts
 const {address, publicKey} = await signer.login();
 ```
 
-**Output example:**
+**Output Example:**
 
 ```js
 {
@@ -198,6 +198,7 @@ logout();
 **Returns:** Promise\<void\>.
 
 **Usage:**
+
 ```ts
 await signer.logout();
 ```
@@ -289,7 +290,7 @@ const sponsoredBalances = await signer.getSponsoredBalances();
 
 **Output fields** are the same as in [getBalance](#getbalance) method.
 
-### Create transactions
+### Create Transactions
 
 The following methods create transactions (but do not sign or broadcast them):
 
@@ -310,7 +311,7 @@ The following methods create transactions (but do not sign or broadcast them):
 
 > Check which of these transactions are supported by your Provider.
 
-#### Common fields
+#### Common Fields
 
 Each create transaction method has optional fields that you don't specify manually in most cases:
 
@@ -571,9 +572,10 @@ invoke(data: {
 
 \* Required field
 
-See [Common fields](#common-fields) for other fields description.
+See [Common Fields](#common-fields) for other fields description.
 
 **Usage:**
+
 ```ts
 const data = {
   dApp: '3Fb641A9hWy63K18KsBJwns64McmdEATgJd',
@@ -1037,7 +1039,7 @@ signer.waitTxConfirm(tx, 1).then((tx) => {
 }});
 ```
 
-## Provider Interface 
+## Provider Interface
 
 Provider should feature the following interface:
 
