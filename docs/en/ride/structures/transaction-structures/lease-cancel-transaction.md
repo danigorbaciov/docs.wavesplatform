@@ -2,13 +2,13 @@
 
 Structure of a [lease cancel transaction](/en/blockchain/transaction-type/lease-cancel-transaction).
 
-### Constructor
+## Constructor
 
 ``` ride
 LeaseCancelTransaction(leaseId: ByteVector, id: ByteVector, fee: Int, timestamp: Int, version: Int, sender: Address, senderPublicKey: ByteVector, bodyBytes: ByteVector, proofs: List[ByteVector])
 ```
 
-### Fields
+## Fields
 
 | # | Name | Data type | Description |
 | :--- | :--- | :--- | :--- |

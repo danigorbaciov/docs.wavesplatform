@@ -1,10 +1,10 @@
-# Create an oracle card with a data transaction
+# Create an Oracle Card With Data Transaction
 
-## Sending a data transaction
+## Sending Data Transaction
 
 The parameters of the oracle card are described in the data transaction, and it also serves to create the oracle card.
 
-To define an oracle card, the data transaction must have a special attribute `wpo_oracle` in the data array:
+To define an oracle card, the data transaction must have special attribute `wpo_oracle` in the data array:
 
 ``` json
 {
@@ -18,15 +18,15 @@ The `wpo_oracle` attribute distinguishes data transactions intended to create an
 
 Oracles that are created in the test network must have the attribute `wpo_testnet`.
 
-To ensure the reliability of the protocol of data transfer between the oracle and users, it is recommended to use the version of this protocol. To this end, each data transaction through which an oracle card is registered or updated should have a "version" parameter.
+To ensure the reliability of the protocol of data transfer between the oracle and users, it is recommended to use the version of this protocol. So, each data transaction through which an oracle card is registered or updated should have a "version" parameter.
 
-## Description of the data transaction
+## Description of the Data Transaction
 
-See information about the data transaction.
+See information about the [data transaction](/en/blockchain/transaction-type/data-transaction).
 
-## Oracle card parameters
+## Oracle Card Parameters
 
-### Keys of data transaction data array
+### Keys of Data Transaction Data Array
 
 | Key | Field in Waves Oracles | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -46,7 +46,7 @@ See information about the data transaction.
 | wpo_example | Example | binary | no | Example of the oracle transaction format |
 | wpo_updatedate |  | integer | yes | Oracle card update timestamp.<br>0 if the card is created for the first time |
 
-### A key whiсh describe an oracle specification
+### A Key Whiсh Describes an Oracle Specification
 
 Each parameter of the oracle specification consists of four attributes:
 
@@ -96,7 +96,7 @@ The "wpo_specification" key is the parameters mentioned above (`version`, `weath
 }
 ```
 
-### Key with the example of the oracle transaction format
+### Key With the Example of the Oracle Transaction Format
 
 The "wpo_example" key value is a base64 string containing an example of the oracle transaction format.
 
@@ -120,7 +120,7 @@ The "wpo_example" key is an example encoded in base64 mentioned above.
 }
 ```
 
-### Now an example of a data transaction used to create an oracle card
+### Now an Example of a Data Transaction Used to Create an Oracle Card
 
 ```
 {
@@ -190,7 +190,7 @@ The "wpo_example" key is an example encoded in base64 mentioned above.
 }
 ```
 
-## Oracle protocol codes
+## Oracle Protocol Codes
 
 | Category code | Code value | Description |
 | :--- | :--- | :--- |

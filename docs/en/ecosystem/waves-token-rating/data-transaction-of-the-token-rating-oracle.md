@@ -1,12 +1,12 @@
-# Data transaction of the Token Rating oracle
+# Data Transaction of the Token Rating Oracle
 
 Once a day, the [Token Rating](https://oracles.wavesexplorer.com/oracle/3P2eDV4pWJGmPjLGLrW4dsMA53te4gzkwnH) oracle sends to the blockchain a [data transaction](/en/blockchain/transaction-type/data-transaction) with [ratings and rates](/en/ecosystem/waves-token-rating/rating-formula) of tokens.
 
-A data transaction contains the information about tokens, that have been rated in the past 24 hours.
+Data transaction contains the information about tokens, that have been rated in the past 24 hours.
 
-A single transaction contains the information about no more than 25 tokens —  if there are more rated tokens, then several transactions will be sent.
+Single transaction contains the information about no more than 25 tokens —  if there are more rated tokens, then several transactions will be sent.
 
-An example of a [data array](/en/blockchain/transaction-type/data-transaction) of such a transaction:
+Example of a [data array](/en/blockchain/transaction-type/data-transaction) of such a transaction:
 
 ``` js
 "data": [
@@ -61,7 +61,7 @@ The key field is formed by [concatenating](https://en.wikipedia.org/wiki/Concate
 | tickerWeight | integer | Service parameter, which contains the value of the WCT weight, which must be at the token in order for the ticker to be set by its issuer |
 | tickerVotes | integer | Service parameter, which contains the value of the Votes sum, which must be at the token in order for the ticker to be set by its issuer |
 
-## An example escaped string with rates
+## Example: Escaped String With Rates
 
 Let's say we have an escaped string with rates:
 

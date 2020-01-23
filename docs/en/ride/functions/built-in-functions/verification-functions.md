@@ -1,4 +1,4 @@
-# Verification functions
+# Verification Functions
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |

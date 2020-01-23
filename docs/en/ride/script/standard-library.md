@@ -1,7 +1,7 @@
 
 # Standard Library
 
-The **Standard Library** is a set of [built-in functions](/en/ride/functions/built-in-functions) of the [script context](/en/ride/script/script-context).
+**Standard Library** is a set of [built-in functions](/en/ride/functions/built-in-functions) of the [script context](/en/ride/script/script-context).
 
 Versions of the Standard Library: — 1, 2, 3, and 4.
 

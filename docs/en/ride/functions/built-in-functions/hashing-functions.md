@@ -1,4 +1,4 @@
-# Hashing functions
+# Hashing Functions
 
 |#| Name | Description | Complexity |
 |:---| :--- | :--- | :--- |
@@ -10,7 +10,7 @@
 
 [blake2b256](https://en.wikipedia.org/wiki/BLAKE_%28hash_function%29) hash function.
 
-```
+```ride
 blake2b256(bytes: ByteVector): ByteVector
 ```
 
@@ -31,7 +31,7 @@ blake2b256(bytes) # Returns 2Gdq2cFpKMjHVfb7cwKoicsqYF5x7Z228tFrbtybEsif
 
 [SHA-3-256](https://en.wikipedia.org/wiki/SHA-3) hash function.
 
-```
+```ride
 keccak256(bytes: ByteVector): ByteVector
 ```
 
@@ -52,7 +52,7 @@ keccak256(bytes) # Returns 8HMEouDPvpPG6nvyNPBpdEmWRGGni5xzcouA56NqMV8A
 
 [SHA-256](https://en.wikipedia.org/wiki/SHA-2) hash function.
 
-```
+```ride
 sha256(bytes: ByteVector): ByteVector
 ```
 

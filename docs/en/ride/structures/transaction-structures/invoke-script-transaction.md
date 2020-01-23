@@ -2,13 +2,13 @@
 
 Structure of an [invoke script transaction](/en/blockchain/transaction-type/invoke-script-transaction).
 
-### Constructor
+## Constructor
 
 ``` ride
 InvokeScriptTransaction(dApp: Address|Alias, payments: List[AttachedPayments], feeAssetId: ByteVector|Unit, function: String, args: List[Boolean|ByteVector|Int|String], id: ByteVector, fee: Int, timestamp: Int, version: Int, sender: Address, senderPublicKey: ByteVector, bodyBytes: ByteVector, proofs: List[ByteVector])
 ```
 
-### Fields
+## Fields
 
 | # | Name | Data type | Description |
 | :--- | :--- | :--- | :--- |

@@ -1,4 +1,4 @@
-# Transaction structures
+# Transaction Structures
 
 ## Tokenisation
 

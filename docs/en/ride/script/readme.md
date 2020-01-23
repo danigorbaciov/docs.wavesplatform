@@ -1,8 +1,8 @@
 # Script
 
-A **script** is a source code in [Ride](/en/ride) language.
+**Script** is a source code in [Ride](/en/ride) language.
 
-## Script types
+## Script Types
 
 There are three types of scripts:
 
@@ -10,7 +10,7 @@ There are three types of scripts:
 * [account scripts](/en/ride/script/script-types/account-script)
 * [asset scripts](/en/ride/script/script-types/asset-script)
 
-## Script complexity
+## Script Complexity
 
 See the page [Complexity](/en/ride/base-concepts/complexity).
 

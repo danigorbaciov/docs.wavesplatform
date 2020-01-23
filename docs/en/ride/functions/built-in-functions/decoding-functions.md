@@ -1,4 +1,4 @@
-# Decoding functions
+# Decoding Functions
 
 |#| Name | Description | Complexity |
 |:---| :--- | :--- | :--- |

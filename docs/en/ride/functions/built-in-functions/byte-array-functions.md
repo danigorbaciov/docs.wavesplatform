@@ -1,4 +1,4 @@
-# Byte array functions
+# Byte Array Functions
 
 |#|Name | Description | Complexity |
 |:---| :--- | :--- | :--- |

@@ -1,4 +1,4 @@
-# Updating oracle card
+# Updating Oracle Card
 
 To update your [oracle card](/en/ecosystem/waves-oracles/oracle-card):
 

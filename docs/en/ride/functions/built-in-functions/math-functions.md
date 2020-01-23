@@ -1,4 +1,4 @@
-# Math functions
+# Math Functions
 
 | # | Name | Description | Complexity |
 |:---| :--- | :--- | :--- |
@@ -31,7 +31,7 @@ Integer `b`.
 
 Integer `c`.
 
-### Conversion formula
+### Conversion Formula
 
 Conversion is performed according to the following formula:
 
@@ -195,7 +195,7 @@ pow(1625, 2, 27, 1, 2, HALFUP) # function returns 185911, so, the result is: 185
 pow(1625, 2, 27, 1, 5, HALFUP) # function returns 185910572, so, the result is: 1859,10572
 ```
 
-## Built-in rounding variables
+## Built-in Rounding Variables
 
 Below is the list of built-in rounding variables. Every variable corresponds to the [rounding method](https://en.wikipedia.org/wiki/Rounding).
 

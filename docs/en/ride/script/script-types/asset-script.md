@@ -1,4 +1,4 @@
-# Asset script
+# Asset Script
 
 An **asset script** is a [Ride script](/en/ride/script) that is attached to an asset with a [set asset script transaction](/en/blockchain/transaction-type/set-asset-script-transaction).
 

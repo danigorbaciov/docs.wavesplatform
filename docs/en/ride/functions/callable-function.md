@@ -1,8 +1,8 @@
-# Callable function
+# Callable Function
 
 A **callable function** is a [function](/en/ride/functions) of a [dApp script](/en/ride/script/script-types/dapp-script) that has `@Callable` [annotation](/en/ride/functions/annotations).
 
-A dApp script may have several callable functions.
+dApp script may have several callable functions.
 
 A callable function of a [dApp](/en/blockchain/account/dapp) can be invoked by the [invoke script transaction](/en/blockchain/transaction-type/invoke-script-transaction).
 
@@ -21,7 +21,7 @@ Starting from Ride v.4, the actions listed above include
 
 In Ride v.4, within invoke script transaction the total amount of transfer/issue/reissue/burn tokens actions must not exceed 10 inclusively.
 
-## Example for Standard Library version 3
+## Example for Standard Library Version 3
 
 ```ride
 @Callable(inv)
@@ -32,7 +32,7 @@ func rate(name: String, rating: Int) = {
 
 > :warning: <a href="/en/ride/script/standard-library">Standard Library</a> Version 4 becomes available from node version 1.2.0, after activation of the "Ride V4 and multiple attached payments for Invoke Script Transaction" (No. 16) feature. See <a href="/en/blockchain/waves-protocol/activation-protocol">Activation Protocol</a>.
 
-## Example for Standard Library version 4
+## Example for Standard Library Version 4
 
 > :bulb: Starting from <a href="/en/ride/script/standard-library">Standard Library</a> version 4, the list of primitive data types values can be passed to the annotated function. Maximum list size - 1000 elements.
 

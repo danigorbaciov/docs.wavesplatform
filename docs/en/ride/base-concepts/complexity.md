@@ -1,4 +1,4 @@
-# Script complexity
+# Script Complexity
 
 **Script complexity** is a dimensionless quantity that estimates computational resources needed to execute a [script](/en/ride/script).
 

@@ -2,13 +2,13 @@
 
 Structure of a [data transaction](/en/blockchain/transaction-type/data-transaction).
 
-### Constructor
+## Constructor
 
 ``` ride
 DataTransaction(data: List[DataEntry], id: ByteVector, fee: Int, timestamp: Int, version: Int, sender: Address, senderPublicKey: ByteVector, bodyBytes: ByteVector, proofs: List[ByteVector])
 ```
 
-### Fields
+## Fields
 
 | # | Name | Data type | Description |
 | :--- | :--- | :--- | :--- |

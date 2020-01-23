@@ -1,7 +1,6 @@
-# DataEntry (for Standard Library version 3)
+# DataEntry (for Standard Library Version 3)
 
 > :warning: The structure is disabled in Standard library version 4. Use `BinaryEntry`, `BooleanEntry`, `IntEntry`, and `StringEntry` instead of it.
-
 
 Structure of a data record of an [account data storage](/en/blockchain/account/account-data-storage).
 

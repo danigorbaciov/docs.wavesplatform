@@ -1,28 +1,28 @@
 # Rating Formula
 
-The rating of a token is a daily weighted mean of individual rates of all users who have ever rated the token:
+The rating of a token is the daily weighted mean of individual rates of all users who have ever rated the token:
 
 R = (R<sub>1</sub>W<sub>1</sub> + R<sub>2</sub>W<sub>2</sub> + ... + R<sub>n</sub>W<sub>n</sub>) / (W<sub>1</sub> + W<sub>2</sub> + ... + W<sub>n</sub>),
 
 where
 
-R<sub>n</sub> is a rate of the n-th user,
+R<sub>n</sub> is the rate of the n-th user,
 
-W<sub>n</sub> is a rate's weight of the n-th user.
+W<sub>n</sub> is the rate's weight of the n-th user.
 
 The calculated value of `R` is rounded to tenths of a number.
 
-## User's rate R<sub>n</sub>
+## User's Rate R<sub>n</sub>
 
 User rates token with R<sub>n</sub> inside of the token card using stars and the **Rate** button. R<sub>n</sub> takes integer values from 1 to 5 inclusive.
 
 User can rate the same token many times — the latest rate will be taken into account.
 
-User can rate any token from the web browser in which [Waves Keeper](https://docs.waves.exchange/en/waves-keeper/) is installed if there is at least 1 [WCT](/en/blockchain/token/wct) on users' address balance. The amount of WCT on the balance affects the weight of the user's rate W<sub>n</sub>.
+User can rate any token from the web browser in which [Waves Keeper](https://docs.waves.exchange/en/waves-keeper/) is installed if there is at least 1 [WCT](/en/blockchain/token/wct) on the user address balance. The amount of WCT on the balance affects the weight of the user's rate W<sub>n</sub>.
 
 At the time when user rates a token, he pays a [fee](/en/blockchain/transaction/transaction-fee) in [WAVES](/en/blockchain/token/waves) for the [data transaction](/en/blockchain/transaction-type/data-transaction).
 
-## Rate's weight W<sub>n</sub> of a user
+## Rate's Weight W<sub>n</sub> of a User
 
 The value of W<sub>n</sub> is calculated by the formula:
 
@@ -30,19 +30,19 @@ W<sub>n</sub> = B<sub>n</sub>k<sub>n</sub>,
 
 where
 
-B<sub>n</sub> is an effective balance of the n-th user in WCT tokens,
+B<sub>n</sub> is the effective balance of the n-th user in WCT tokens,
 
-k<sub>n</sub> — is a weight coefficient of the n-th user.
+k<sub>n</sub> — is the weight coefficient of the n-th user.
 
 The calculated value of W<sub>n</sub> is rounded to an integer.
 
-## User's effective balance B<sub>n</sub>
+## User's Effective Balance B<sub>n</sub>
 
 The effective balance B<sub>n</sub> is the balance in WCT at the time when the user rates a token, minus the sum of all outgoing operations in WCT during the next 24 hours.
 
 If B<sub>n</sub> < 1, then the user's rate will not be taken into account during the token's rating calculation.
 
-## User's weight coefficient k<sub>n</sub>
+## User's Weight Coefficient k<sub>n</sub>
 
 The value of the coefficient k<sub>n</sub> depends on the value of the effective balance B<sub>n</sub> of the user and is calculated by the formula:
 
@@ -57,7 +57,7 @@ The value of the coefficient k<sub>n</sub> depends on the value of the effective
 
 The calculated value of k<sub>n</sub> is rounded to hundredths of a number.
 
-## Token's rating calculation
+## Token's Rating Calculation
 
 **User 1** rated token with 5 stars. At the time of the rate, there were 10,000 WCT on the user's balance.
 

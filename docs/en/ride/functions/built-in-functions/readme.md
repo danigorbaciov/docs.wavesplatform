@@ -1,10 +1,10 @@
-# Built-in functions
+# Built-in Functions
 
 A **built-in function** is a [function](/en/ride/functions) of the [script context](/en/ride/script/script-context).
 
-## List of the built-in functions
+## List of the Built-in Functions
 
-### [Account data storage functions](/en/ride/functions/built-in-functions/account-data-storage-functions)
+### [Account Data Storage Functions](/en/ride/functions/built-in-functions/account-data-storage-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -19,7 +19,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 9 | getStringValue(Address&#124;Alias, String): String | Gets a string by key. Throws an exception if there is no data | 100 |
 | 10 | wavesBalance(Address&#124;Alias): Int | Gets account balance in [WAVES](/en/blockchain/token/waves) | 109 |
 
-### [Blockchain functions](/en/ride/functions/built-in-functions/blockchain-functions)
+### [Blockchain Functions](/en/ride/functions/built-in-functions/blockchain-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -28,7 +28,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 3 | transactionHeightById(ByteVector):  Int&#124;Unit | Gets the [block height](/en/blockchain/block/block-height) of a transaction | 100 |
 | 4 | transferTransactionById(ByteVector): TransferTransaction&#124;Unit | Gets the data of a [transfer transaction](/en/blockchain/transaction-type/transfer-transaction) | 100 |
 
-### [Byte array functions](/en/ride/functions/built-in-functions/byte-array-functions)
+### [Byte Array Functions](/en/ride/functions/built-in-functions/byte-array-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -38,7 +38,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 4 | take(ByteVector, Int): ByteVector | Returns the first `N` bytes of the byte array | 1 |
 | 5 | takeRight(ByteVector, Int): ByteVector | Returns the last `N` bytes of the byte array | 19 |
 
-### [Converting functions](/en/ride/functions/built-in-functions/converting-functions)
+### [Converting Functions](/en/ride/functions/built-in-functions/converting-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -56,7 +56,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 12 | toString(Int): String | Converts an integer to a string | 1 |
 | 13 | toUtf8String(ByteVector): String | Converts an array of bytes to a UTF-8 string | 20 |
 
-### [Data transaction functions](/en/ride/functions/built-in-functions/data-transaction-functions)
+### [Data Transaction Functions](/en/ride/functions/built-in-functions/data-transaction-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -77,7 +77,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 15 | getStringValue(List[DataEntry], String): String | Gets a string value from a list of data entires by key. Throws an exception if there is no data | 10 |
 | 16 | getStringValue(List[DataEntry], Int): String | Gets a string value from a list of data entires by index. Throws an exception if there is no data | 30 |
 
-### [Decoding functions](/en/ride/functions/built-in-functions/decoding-functions)
+### [Decoding Functions](/en/ride/functions/built-in-functions/decoding-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -87,7 +87,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 4 | fromBase58String(String): ByteVector | Decodes [Base58](https://en.wikipedia.org/wiki/Base58) string to an array of bytes | 10 |
 | 5 | fromBase64String(String): ByteVector | Decodes [Base64](https://en.wikipedia.org/wiki/Base64) string to an array of bytes | 10 |
 
-### [Encoding functions](/en/ride/functions/built-in-functions/encoding-functions)
+### [Encoding Functions](/en/ride/functions/built-in-functions/encoding-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -95,14 +95,14 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 2 | toBase58String(ByteVector): String | Encodes array of bytes to [Base58](https://en.wikipedia.org/wiki/Base58) string | 10 |
 | 3 | toBase64String(ByteVector): String | Encodes array of bytes to [Base64](https://en.wikipedia.org/wiki/Base64) string | 10 |
 
-### [Exception functions](/en/ride/functions/built-in-functions/exception-functions)
+### [Exception Functions](/en/ride/functions/built-in-functions/exception-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
 | 1 | throw() | Raises an exception | 1 |
 | 2 | throw(String) | Raises an exception with a message | 1 |
 
-### [Hashing functions](/en/ride/functions/built-in-functions/hashing-functions)
+### [Hashing Functions](/en/ride/functions/built-in-functions/hashing-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -110,7 +110,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 2 | keccak256(ByteVector): ByteVector | Hashes an array of bytes using [SHA-3-256](https://en.wikipedia.org/wiki/SHA-3) | 10 |
 | 3 | sha256(ByteVector): ByteVector | Hashes an array of bytes using [SHA-256](https://en.wikipedia.org/wiki/SHA-2) | 10 |
 
-### [List functions](/en/ride/functions/built-in-functions/list-functions)
+### [List Functions](/en/ride/functions/built-in-functions/list-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -118,7 +118,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 2 | cons(T, List[T]): List[T] | Inserts the element at the beginning of the list | 2 |
 | 3 | size(List[T]): Int | Returns the size of the list | 2 |
 
-### [Math functions](/en/ride/functions/built-in-functions/math-functions)
+### [Math Functions](/en/ride/functions/built-in-functions/math-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -127,7 +127,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 3 | median(List[Int]): Int | Returns the median of a list of integers | 10 |
 | 4 | pow(Int, Int, Int, Int, Int, Union): Int | Raises the number to a power | 100 |
 
-### [String functions](/en/ride/functions/built-in-functions/string-functions)
+### [String Functions](/en/ride/functions/built-in-functions/string-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -141,7 +141,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 8 | take(String, Int): String | Takes the first `n` characters from a string | 1 |
 | 9 | takeRight(String, Int): String | Takes the last `n` characters from a string | 19 |
 
-### [Union functions](/en/ride/functions/built-in-functions/union-functions)
+### [Union Functions](/en/ride/functions/built-in-functions/union-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -150,7 +150,7 @@ A **built-in function** is a [function](/en/ride/functions) of the [script conte
 | 3 | value(T&#124;Unit): T | Gets a data type from an union | 13 |
 | 4 | valueOrErrorMessage(T&#124;Unit, String): T | Gets a data type from an union. Throws an exception if there is no data | 13 |
 
-### [Verification functions](/en/ride/functions/built-in-functions/verification-functions)
+### [Verification Functions](/en/ride/functions/built-in-functions/verification-functions)
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |

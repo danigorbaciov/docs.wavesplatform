@@ -1,4 +1,4 @@
-# List functions
+# List Functions
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |

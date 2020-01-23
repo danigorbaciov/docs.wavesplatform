@@ -1,4 +1,4 @@
-# Account script
+# Account Script
 
 An **account script** is a [script](/en/ride/script) that has the following [directives](/en/ride/script/directives):
 
@@ -9,7 +9,7 @@ An **account script** is a [script](/en/ride/script) that has the following [dir
 
 The [body](/en/ride/script/script-body) of the account script is an [expression](/en/ride/base-concepts/expression) of the boolean type.
 
-## Attaching account script
+## Attaching Account Script
 
 An account script is attached to the [account](/en/blockchain/account) with a [set script transaction](/en/blockchain/transaction-type/set-script-transaction).
 

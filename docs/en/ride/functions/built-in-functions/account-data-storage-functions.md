@@ -1,4 +1,4 @@
-# Account data storage functions
+# Account Data Storage Functions
 
 > Learn more about [account data storage](/en/blockchain/account/account-data-storage)
 

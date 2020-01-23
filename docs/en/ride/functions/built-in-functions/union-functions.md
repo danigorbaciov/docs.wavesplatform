@@ -1,4 +1,4 @@
-# Union functions
+# Union Functions
 
 | # | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |

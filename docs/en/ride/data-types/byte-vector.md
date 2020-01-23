@@ -14,7 +14,6 @@ let c = base64'UmlkZQ=='
 
 You can convert [integer](/en/ride/data-types/int), [boolean](/en/ride/data-types/boolean) and [string](/en/ride/data-types/string) values to a byte array using [toBytes](/en/ride/functions/built-in-functions/converting-functions) function:
 
-
 ``` ride
 let a = 42.toBytes()
 let b = true.toBytes()

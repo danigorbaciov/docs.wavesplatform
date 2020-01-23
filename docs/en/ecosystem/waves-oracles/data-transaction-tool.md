@@ -1,4 +1,4 @@
-# Data transaction tool
+# Data Transaction Tool
 
 Use the **Data transaction tool** to write data transaction in the data storage of the oracle account.
 

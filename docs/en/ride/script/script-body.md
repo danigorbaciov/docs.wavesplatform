@@ -1,6 +1,6 @@
-# Script body
+# Script Body
 
-A **script body** is the source code of the [script](/en/ride/script) that follows immediately after the [directives](/en/ride/script/directives).
+**Script body** is the source code of the [script](/en/ride/script) that follows immediately after the [directives](/en/ride/script/directives).
 
 The body of a [dApp script](/en/ride/script/script-types/dapp-script) is a _set_ of [definitions](/en/ride/base-concepts/definition).
 

@@ -1,4 +1,4 @@
-# WriteSet (for Standard Library version 3)
+# WriteSet (for Standard Library Version 3)
 
 > :warning: The structure is disabled in Standard library version 4. Use `BinaryEntry`, `BooleanEntry`, `IntEntry`, and `StringEntry` directly, see the [Callable function](/en/ride/functions/callable-function) section.
 

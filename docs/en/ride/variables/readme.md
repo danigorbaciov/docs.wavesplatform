@@ -35,6 +35,6 @@ let result = f()
 
 Ride has the lazy variable initialization, so the value of the variable is calculated only at the first call to it.
 
-## Variables built into the script
+## Variables Built Into the Script
 
 The [script](/en/ride/script) has [built-in variables](/en/ride/variables/built-in-variables).

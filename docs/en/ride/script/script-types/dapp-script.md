@@ -1,4 +1,4 @@
-# dApp script
+# dApp Script
 
 A **dApp script** — [Ride script](/en/ride/script), that has the following directive:
 

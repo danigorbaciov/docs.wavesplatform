@@ -1,4 +1,4 @@
-# Converting functions
+# Converting Functions
 
 | # | Name | Description | Complexity |
 |:--- | :--- | :--- | :--- |
@@ -16,12 +16,11 @@
 | 12 | [toString(Int): String](#tostring-int) | Converts an integer to a string | 1 |
 | 13 | [toUtf8String(ByteVector): String](#to-utf8-string) | Converts an array of bytes to a [UTF-8](https://en.wikipedia.org/wiki/UTF-8) string | 20 |
 
-
 ## addressFromPublicKey(ByteVector): Address<a id="address-from-public-key"></a>
 
 Gets the corresponding [address](/en/blockchain/account/address) of the account public key.
 
-```
+```ride
 addressFromPublicKey(publicKey: ByteVector): Address
 ```
 
@@ -58,12 +57,11 @@ let address =Address(base58'3NADPfTVhGvVvvRZuqQjhSU4trVqYHwnqjF')
 addressFromRecipient(address)
 ```
 
-
 ### parseInt(String): Int|Unit<a id="parse-int"></a>
 
 Converts the string representation of a number to its integer equivalent.
 
-```
+```ride
 parseInt(str: String): Int|Unit
 ```
 
@@ -88,7 +86,7 @@ Converts the string representation of a number to its integer equivalent.
 
 Raises an exception if the string cannot be parsed.
 
-```
+```ride
 parseIntValue(str: String): Int
 ```
 
@@ -112,7 +110,7 @@ parseIntValue("20 WAVES") # Error while parsing string to integer
 
 Converts a boolean value to an array of bytes.
 
-```
+```ride
 toBytes(b: Boolean): ByteVector
 ```
 
@@ -133,7 +131,7 @@ toBytes(false) # Returns 1
 
 Converts an integer to an array of bytes.
 
-```
+```ride
 toBytes(n: Int): ByteVector
 ```
 
@@ -153,7 +151,7 @@ toBytes(10) # Returns 1111111B
 
 Converts a string to an array of bytes.
 
-```
+```ride
 toBytes(s: String): ByteVector
 ```
 
@@ -173,7 +171,7 @@ toBytes("Ride") # Returns 37BPKA
 
 Converts an array of bytes to an integer.
 
-```
+```ride
 toInt(bin: ByteVector) : Int
 ```
 
@@ -193,7 +191,7 @@ toInt(bytes) # Returns 10
 
 Converts an array of bytes to an integer starting from a certain index.
 
-```
+```ride
 toInt(bin: ByteVector, offset: Int): Int
 ```
 
@@ -240,7 +238,7 @@ toString(address) # Returns "3NADPfTVhGvVvvRZuqQjhSU4trVqYHwnqjF"
 
 Converts a boolean value to a string.
 
-```
+```ride
 toString(b: Boolean): String
 ```
 
@@ -261,7 +259,7 @@ toString(false) # Returns "false"
 
 Converts an integer to a string.
 
-```
+```ride
 toString(n: Int): String
 ```
 
@@ -277,12 +275,11 @@ Integer to convert.
 toString(10) # Returns "10"
 ```
 
-
 ### toUtf8String(ByteVector): String<a id="to-utf8-string"></a>
 
 Converts an array of bytes to a [UTF-8](https://en.wikipedia.org/wiki/UTF-8) string.
 
-```
+```ride
 toUtf8String(u: ByteVector): String
 ```
 

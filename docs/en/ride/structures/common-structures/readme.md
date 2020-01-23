@@ -1,4 +1,4 @@
-# Common structures
+# Common Structures
 
 | Name | Description |
 | :--- | :--- |

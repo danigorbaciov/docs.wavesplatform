@@ -1,4 +1,4 @@
-# Create an oracle card with Waves Oracle
+# Create an Oracle Card With Waves Oracle
 
 Only authorized users can create an [oracle card](/en/ecosystem/waves-oracles/oracle-card). Authorization is performed using Waves Keeper.
 
@@ -6,7 +6,7 @@ The account can create no more than one oracle card.
 
 If the authorization is done through a test network account, the oracle card will be created in the test network. If the authorization is done through an account from the main network, the oracle card will be created in the main network.
 
-## Create an oracle card
+## Create an Oracle Card
 
 1. Determine which Waves account you will use to create your oracle card. This can be an existing account or a newly created one. Use the instructions to create a new Waves account.
 2. Install Waves Keeper if this extension is not already installed.
@@ -19,7 +19,7 @@ If the authorization is done through a test network account, the oracle card wil
 
 Once the oracle card has been created, the oracle card is available to all users. The oracle card informs users what data and in what format the oracle will send from sources (e.g. external APIs) to blockchain Waves.
 
-## Fields of the 'create my oracle' form
+## Fields of the 'Create My Oracle' Form
 
 | Field | Description |
 | :--- | :--- |

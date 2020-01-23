@@ -1,4 +1,4 @@
-# Blockchain functions
+# Blockchain Functions
 
 |   #  | Name | Description | Complexity |
 | :--- | :--- | :--- | :--- |
@@ -11,7 +11,7 @@
 
 Gets the information about a [token](/en/blockchain/token).
 
-```
+```ride
 assetInfo(id: ByteVector): Аsset|Unit
 ```
 
@@ -25,7 +25,7 @@ ID of the [token](/en/blockchain/token).
 
 Gets the information about a [block](/en/blockchain/block) by the [block height](/en/blockchain/block/block-height).
 
-```
+```ride
 blockInfoByHeight(height: Int): BlockInfo|Unit
 ```
 
@@ -39,7 +39,7 @@ Block height.
 
 Gets the [block height](/en/blockchain/block/block-height) of a transaction
 
-```
+```ride
 transactionHeightById(id: ByteVector): Int|Unit
 ```
 
@@ -53,7 +53,7 @@ ID of the transaction.
 
 Gets the data of a [transfer transaction](/en/blockchain/transaction-type/transfer-transaction).
 
-```
+```ride
 transferTransactionById(id: ByteVector): TransferTransaction|Unit
 ```
 

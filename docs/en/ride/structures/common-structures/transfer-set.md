@@ -1,4 +1,4 @@
-# TransferSet (for Standard Library version 3)
+# TransferSet (for Standard Library Version 3)
 
 > :warning: The structure is disabled in Standard library version 4. Starting with version 4 use `ScriptTransfer` directly, see the [Callable function](/en/ride/functions/callable-function) section.
 

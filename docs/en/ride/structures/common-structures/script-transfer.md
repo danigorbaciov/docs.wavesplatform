@@ -2,13 +2,13 @@
 
 Structure of a [token](/en/blockchain/token) transfer.
 
-### Constructor
+## Constructor
 
 ``` ride
 ScriptTransfer(recipient: Address|Alias, amount: Int, asset: ByteVector|Unit)
 ```
 
-### Fields
+## Fields
 
 |   #   | Name | Data type | Description |
 | :--- | :--- | :--- | :--- |

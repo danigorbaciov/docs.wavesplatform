@@ -1,6 +1,6 @@
 # Operators
 
-## Arithmetic operators
+## Arithmetic Operators
 
 | # | Symbol | Operator |
 | :--- | :---: | :--- |
@@ -10,7 +10,7 @@
 | 4 | / | Division |
 | 5 | % | Remainder |
 
-## Comparison operators
+## Comparison Operators
 
 | # | Symbol | Operator |
 | :--- | :---: | :--- |
@@ -19,41 +19,41 @@
 | 3 | &lt;= | Less than or equal |
 | 4 | &gt;= | Greater than or equal |
 
-## Equality operators
+## Equality Operators
 
 | # | Symbol | Operator |
 | :--- | :---: | :--- |
 | 1 | == | Equality |
 | 2 | != | Inequality |
 
-## Local definition operators
+## Local Definition Operators
 
 | # | Keyword | Operator |
 | :--- | :---: | :--- |
 | 1 | let | Variable local definition operator |
 | 2 | func | Function local definition operator |
 
-## Conditional operators
+## Conditional Operators
 
 | # | Keyword | Operator |
 | :--- | :---: | :--- |
 | 1 | if-then-else | if-then-else |
 | 2 | match-case | match-case |
 
-## List constructor operator
+## List Constructor Operator
 
 | # | Symbol | Operator |
 | :--- | :---: | :--- |
 | 1 | :: | List constructor operator |
 
-## Unary operators
+## Unary Operators
 
 | # | Symbol | Operator |
 | :--- | :---: | :--- |
 | 1 | - | Unary minus |
 | 2 | ! | Logical negation |
 
-## Logical operators
+## Logical Operators
 
 | # | Symbol | Operator |
 | :--- | :---: | :--- |

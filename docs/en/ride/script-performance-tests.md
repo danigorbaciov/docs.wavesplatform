@@ -1,9 +1,9 @@
 # Script Performance Tests
 
 We conducted performance tests for all aspects of our scripts.  
-For this purpose, we developed an benchmark subproject with [JMH](http://openjdk.java.net/projects/code-tools/jmh/) that computes the complexity of scripts after compilation phase by AST \(Abstract Syntax Tree\) traversal in special complexity units.
+For this purpose, we developed benchmark subproject with [JMH](http://openjdk.java.net/projects/code-tools/jmh/) that computes the complexity of scripts after compilation phase by AST \(Abstract Syntax Tree\) traversal in special complexity units.
 
-Complexity units is a measure of the script's relative cost: we found out the most expensive operation in terms of computational complexity and defined it equal to **100 complexity units**. In every test, we conducted **10 tests** and calculated the **average cost**. 
+Complexity units is a measure of the script's relative cost: we found out the most expensive operation in terms of computational complexity and defined it equal to **100 complexity units**. In every test, we conducted **10 tests** and calculated the **average cost**.
 
 **The performance tests' results are the following:**
 
@@ -91,4 +91,3 @@ Let's Compare the applying process for a block with 5\,000 tx for a scripted acc
 As a result, we define the following constraint for a script cost: a script must have a size of** no more then 8 kB** and it must be **faster than 20 executions** of `sigVerify`, which is the most expensive operation.  
 **The fixed fee** for each scripted unit is equal to **400,000 wavelets** \(Waves coins, 100,000,000 wavelets = 1 Wave\).  
 For example, if you use a scripted asset \(smart asset\) then you pay 400,000 wavelets, if you also have a scripted transaction then you have to pay 2 \* 400,000 wavelets.
-

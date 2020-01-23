@@ -1,12 +1,12 @@
 # Directives
 
-A **directive** is an instruction that sets the compilation mode of the [script](/en/ride/script).
+**Directive** is an instruction that sets the compilation mode of the [script](/en/ride/script).
 
 ``` ride
 {-# DIRECTIVE_NAME VALUE #-}
 ```
 
-## Directives list
+## Directives List
 
 | # | Directive name | Directive function | Possible values |
 | :--- | :--- | :--- | :--- |

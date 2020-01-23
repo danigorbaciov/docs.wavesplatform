@@ -2,13 +2,13 @@
 
 Structure of an [issue transaction](/en/blockchain/transaction-type/issue-transaction).
 
-### Constructor
+## Constructor
 
 ``` ride
 IssueTransaction(quantity: Int, name: ByteVector, description: ByteVector, reissuable: Boolean, decimals: Int, script: ByteVector|Unit, id: ByteVector, fee: Int, timestamp: Int, version: Int, sender: Address, senderPublicKey: ByteVector, bodyBytes: ByteVector, proofs: List[ByteVector])
 ```
 
-### Fields
+## Fields
 
 | # | Name | Data type | Description |
 | :--- | :--- | :--- | :--- |

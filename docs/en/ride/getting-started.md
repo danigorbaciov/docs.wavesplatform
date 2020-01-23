@@ -1,26 +1,26 @@
-# Getting started
+# Getting Started
 
 A smart contract language for Waves Platform
 
 ## Introduction
 
-Ride is Waves Platform’s purpose-designed programming language for smart contracts. It was created to address many of the most serious shortcomings of other popular smart contract languages. The overall idea was to offer a straightforward functional language for dApp development on the Waves blockchain. 
+Ride is Waves Platform’s purpose-designed programming language for smart contracts. It was created to address many of the most serious shortcomings of other popular smart contract languages. The overall idea was to offer straightforward functional language for dApp development on the Waves blockchain.
 
-Ride is easy to learn, especially for beginning developers. This brochure gives a comprehensive introduction to Ride, along with examples and further tools and resources.
+Ride is easy to learn, especially for beginning developers. This article gives comprehensive introduction to Ride, along with examples and further tools and resources.
 
 ## Overview
 
-Ride is a statically-typed, lazy, functional, expression-based compiled programming language. It is designed for building developer-friendly decentralized applications (dApps).
+Ride is statically-typed, lazy, functional, expression-based compiled programming language. It is designed for building developer-friendly decentralized applications (dApps).
 
-Ride is not Turing Complete and its execution engine (virtual machine) doesn’t have any concept of loops or possibility for recursions. Also, there are a number of limitations by design, helping to ensure execution is secure and straightforward. However, we recognize that iterations are necessary and have implemented them as FOLD macros (see below). One of the key features is that the execution cost is always predictable and known in advance, so all code executes as intended with no failed transactions recorded on-chain – removing a significant source of frustration.
+Ride is not Turing Complete and its execution engine (virtual machine) doesn’t have any concept of loops or possibility for recursions. Also, there are limitations by design, helping to ensure execution is secure and straightforward. However, we recognize that iterations are necessary and have implemented them as FOLD macros (see below). One of the key features is that the execution cost is always predictable and known in advance, so all code executes as intended with no failed transactions recorded on-chain – removing a significant source of frustration.
 
 Despite being simple to use, however, Ride is powerful and offers wide-ranging functionality to developers. It’s broadly based on Scala and is also influenced by F# and the functional paradigm.
 
-Ride is simple and concise. It will take around an hour to read this brochure, after which you will know everything about the Ride and opportunities that it gives for dApps development.
+Ride is simple and concise. It will take around an hour to read this article, after which you will know everything about the Ride and opportunities that it gives for dApps development.
 
 ## Disclaimer
 
-Ride Standard Library (STDLIB) is under active development. At the time of publication, the most up-to-date version is STDLIB_VERSION 3, with STDLIB_VERSION 4 on the way. The brochure covers most of the projected features too. Those which are not part of STDLIB_VERSION 3 are marked with (*).
+Ride Standard Library (STDLIB) is under active development. At the time of publication, the most up-to-date version is STDLIB_VERSION 3, with STDLIB_VERSION 4 on the way. The article covers most of the projected features too. Those which are not part of STDLIB_VERSION 3 are marked with (*).
 
 ## “Hello world!”
 
@@ -32,7 +32,7 @@ func say() = {
 }
 ```
 
-Functions in Ride are declared with `func` (see further below). Functions do have return types, this is inferred automatically by the compiler, so you don't have to declare them. In the case above the function say returns the string `Hello World!`. There is no `return` statement in the language because Ride is expression-based (everything is an expression), and the last statement is a result of the function.
+Functions in Ride are declared with `func` (see further below). Functions do have return types, this is inferred automatically by the compiler, so you don't have to declare them. In the case above the function `say` returns the string `Hello World!`. There is no `return` statement in the language because Ride is expression-based (everything is an expression), and the last statement is a result of the function.
 
 ## Blockchain
 
@@ -64,7 +64,7 @@ Every Ride script should start with directives for the compiler. At the time of 
 
 `STDLIB_VERSION` sets the version of the standard library. The latest version currently in production is 3.
 
-`CONTENT_TYPE` sets the type of the file you're working on. There are different content types, `DAPP` and `EXPRESSION`. The `DAPP` type allows you to define functions and finish execution with certain transactions (changes to the blockchain), as well as using annotations. The `EXPRESSION` type should always return a boolean value, since it’s used as a predicate for transaction validation.
+`CONTENT_TYPE` sets the type of the file you're working on. There are different content types, `DAPP` and `EXPRESSION`. The `DAPP` type allows you to define functions and finish execution with certain transactions (changes to the blockchain), as well as using annotations. The `EXPRESSION` type should always return a boolean value, since it is used as a predicate for transaction validation.
 
 `SCRIPT_TYPE` sets the entity type we want to add to the script to change its default behavior. Ride scripts can be attached to either an `ACCOUNT` or `ASSET`.
 
@@ -87,7 +87,7 @@ let b = 1
 
 All variables in Ride are immutable. This means you cannot change the value of a variable after declaration.
 
-Ride is strongly typed and the variable's type is inferred from the value on the right hand side. 
+Ride is strongly typed and the variable's type is inferred from the value on the right hand side.
 
 Ride allows you to define variables globally, inside any function, or even inside a variable definition.
 
@@ -153,7 +153,7 @@ let b2 = this.getInteger(“key”)
 
 In these examples `a1` is the same as `a2` and `b1` is the same as `b2`. 
 
-## Basic types
+## Basic Types
 
 The main basic types and examples are listed below:
 
@@ -193,7 +193,7 @@ let age = 21
 "Alice is " + age.toString() # will work!
 ```
 
-## Special types
+## Special Types
 
 Ride has few core types, which operate much as they do in Scala.
 
@@ -212,7 +212,7 @@ Nothing is the 'bottom type' of Ride’s type system. No value can be of type No
 ```scala
 2 + throw() # the expression compiles because
     # there's a defined function +(Int, Int).
-      # The type of the second operand is Nothing, 
+      # The type of the second operand is Nothing,
       # which complies to any required type.
 ```
 
@@ -248,7 +248,7 @@ let newList2 = [4, 8, 15, 16] ++ [23, 42]     # [4 8 15 16 23 42](*)
 - To append an element, use the :+ operator (*)
 - To concatenate 2 lists, use the ++ operator (*)
 
-### Union types & Type Matching
+### Union Types & Type Matching
 
 ```scala
 let valueFromBlockchain = getString("3PHHD7dsVqBFnZfUuDPLwbayJiQudQJ9Ngf", "someKey") # Union(String | Unit)
@@ -293,7 +293,7 @@ let amount = match tx {              # tx is a current outgoing transaction
 
 The code above shows an example of type matching. There are different types of transactions in Waves, and depending on the type, the real amount of transferred tokens can be stored in different fields. If a transaction is `TransferTransaction` or `MassTransferTransaction` we use the corresponding field, while in all other cases, we will get 0.
 
-## State reader functions
+## State Reader Functions
 
 ```scala
 let readOrZero = match getInteger(this, "someKey") { # reading data from state
@@ -350,7 +350,7 @@ if (a != 100) then
   else throw("A is 100")
 ```
 
-## Predefined data structures
+## Predefined Data Structures
 
 \#**LET THE HOLY WAR BEGIN**
 
@@ -368,7 +368,7 @@ let transferSet = TransferSet([ScriptTransfer("3P23fi1qfVw6RVDn4CH2a5nNouEtWNQ4T
 
 All data structures can be used for type checking, pattern matching and their constructors as well.
 
-## Loops with FOLD&lt;N&gt;
+## Loops With FOLD&lt;N&gt;
 
 Since Ride’s virtual machine doesn’t have any concept of loops, they are implemented at compiler level via the FOLD&lt;N&gt; macro. The macro behaves like the ‘fold’ function in other programming languages, taking the input arguments: collection for iteration, starting values of the accumulator and folding function.
 
@@ -424,7 +424,7 @@ func verifier() = {
 }
 ```
 
-### @Verifier annotation
+### @Verifier Annotation
 
 ```scala
 @Verifier(tx)
@@ -436,7 +436,7 @@ func verifier() = {
 }
 ```
 
-A function with the `@Verifier` annotation sets the rules for outgoing transactions of a decentralized application (dApp). Verifier functions cannot be called from the outside, but they are executed every time an attempt is made to send a transaction from a dApp.
+A function with the `@Verifier` annotation sets the rules for outgoing transactions of a decentralized application (dApp). Verifier functions cannot be called from the outside, but they are executed every time an attempt is made to send a transaction from dApp.
 
 Verifier functions should always return a `Boolean` value as a result, depending on which a transaction will be recorded to the blockchain or not.
 
@@ -454,7 +454,7 @@ The Verifier function binds variable `tx`, which is an object with all fields of
 
 A maximum of one `@Verifier()` function can be defined in each dApp script.
 
-### @Callable annotation
+### @Callable Annotation
 
 Functions with the `@Callable` annotation can be called (or invoked) from outside of the blockchain. To call a callable function you have to send `InvokeScriptTransaction`.
 

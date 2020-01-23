@@ -14,6 +14,6 @@ The language:
 
 Use [Waves IDE](/en/building-apps/smart-contracts/tools/waves-ide) or Visual Studio Code with the [Ride extension](https://marketplace.visualstudio.com/items?itemName=wavesplatform.waves-ride) for writing scripts.
 
-## The history of creation
+## The History of Creation
 
 Ride was created in 2018. The [white paper](https://wavesplatform.com/files/docs/white_paper_waves_smart_contracts.pdf) of the language was published at that time also.

@@ -1,10 +1,10 @@
-# Data transaction with user's rate
+# Data Transaction With User's Rate
 
-When a user rates a token inside the token's card, a [data transaction](/en/blockchain/transaction-type/data-transaction) is sent from the user's [address](/en/blockchain/account/address).
+When a user rates a token inside the token's card, the [data transaction](/en/blockchain/transaction-type/data-transaction) is sent from the user's [address](/en/blockchain/account/address).
 
 An example of the `data` field of such a transaction:
 
-```
+```bash
 "data": [
   {
     "key": "tokenRating",

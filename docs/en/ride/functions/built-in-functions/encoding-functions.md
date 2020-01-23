@@ -1,4 +1,4 @@
-# Encoding functions
+# Encoding Functions
 
 |#| Name | Description | Complexity |
 |:---| :--- | :--- | :--- |
@@ -6,12 +6,11 @@
 | 2 | [toBase58String(ByteVector): String](#to-base-58-string) | Encodes array of bytes to [Base58](https://en.wikipedia.org/wiki/Base58) string | 10 |
 | 3 | [toBase64String(ByteVector): String](#to-base-64-string) | Encodes array of bytes to [Base64](https://en.wikipedia.org/wiki/Base64) string | 10 |
 
-
 ## toBase16String(ByteVector): String<a id="to-base-16-string"></a>
 
 Encodes an array of bytes to a [Base16](https://en.wikipedia.org/wiki/Hexadecimal) string.
 
-```
+```ride
 toBase16String(bytes: ByteVector): String
 ```
 
@@ -32,7 +31,7 @@ toBase16String(base16'52696465') # Returns "52696465"
 
 Encodes an array of bytes to a [Base58](https://en.wikipedia.org/wiki/Base58) string.
 
-```
+```ride
 toBase58String(bytes: ByteVector): String
 ```
 
@@ -53,7 +52,7 @@ toBase58String(base58'37BPKA')  # Returns "37BPKA"
 
 Encodes an array of bytes to a [Base64](https://en.wikipedia.org/wiki/Base64) string.
 
-```
+```ride
 toBase64String(bytes: ByteVector): String
 ```
 
