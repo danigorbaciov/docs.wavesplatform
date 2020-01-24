@@ -3,17 +3,17 @@
 ## POST /leasing/lease
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Creates lease transaction.
+Создает транзакцию лизинга.
 
-**Request params**
+**Параметры запроса:**
 
 ```
-"sender" - Sender address, Base58-encoded
-"fee" - Amount of transaction fee
-"amount" - amount of leased waves
+"sender" - Адрес отправителя в Base58
+"fee" - Сумма комимссии транзакции
+"amount" - Количество передаваемых в лизинг waves
 ```
 
-**Request JSON example**
+**Пример запроса в JSON:**
 
 ```js
  {
@@ -24,7 +24,7 @@ Creates lease transaction.
 }
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -42,17 +42,17 @@ Creates lease transaction.
 ### POST /leasing/cancel
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Creates lease cancel transaction.
+СОздает транзакцию отмены лизинга.
 
-**Request params**
+**Параметры запроса:**
 
 ```
-"sender" - Sender address, Base58-encoded
-"fee" - Amount of transaction fee
-"leaseId" - lease id for cancel
+"sender" - Адрес отправителя в Base58
+"fee" - Сумма комимссии транзакции
+"leaseId" - id отменяемого лизинга
 ```
 
-**Request JSON example**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -62,7 +62,7 @@ Creates lease cancel transaction.
 }
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -80,23 +80,19 @@ Creates lease cancel transaction.
 ## POST /leasing/broadcast/lease
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
+Создает подписанную транзакцию лизинга.
 
-
-
-
-Creates signed lease transaction.
-
-**Request params**
+**Параметры запроса:**
 
 ```
-"senderPublicKey" - Sender account's public key, Base58-encoded
-"fee" - Amount of transaction fee
-"amount" - amount of leased waves
-"timestamp" - Transaction timestamp
-"signature" - Signature of all transaction data, Base58-encoded
+"senderPublicKey" - Публичный ключ аккаунта отправителя в Base58
+"fee" - Сумма комимссии транзакции
+"amount" - Количество передаваемых в лизинг waves
+"timestamp" - Временная отметка транзакции
+"signature" - Подпись всех данных транзакции в Base58
 ```
 
-**Request JSON example**
+**Пример запроса в JSON:**
 
 ```js
  {
@@ -109,7 +105,7 @@ Creates signed lease transaction.
 }
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -128,19 +124,19 @@ Creates signed lease transaction.
 ## POST /leasing/broadcast/cancel
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Creates signed lease cancel transaction.
+Создает подписанную транзакцию лизинга.
 
-**Request params**
+**Параметры запроса:**
 
 ```
-"senderPublicKey" - Sender account's public key, Base58-encoded
-"fee" - Amount of transaction fee
-"txId" - lease id for cancel
-"timestamp" - Transaction timestamp
-"signature" - Signature of all transaction data, Base58-encoded
+"senderPublicKey" - Публичный ключ аккаунта отправителя в Base58
+"fee" - Сумма комимссии транзакции
+"txId" - id отменяемого лизинга
+"timestamp" - Временная отметка транзакции
+"signature" - Подпись всех данных транзакции в Base58
 ```
 
-**Request JSON example**
+**Пример запроста в JSON:**
 
 ```js
 {
@@ -152,7 +148,7 @@ Creates signed lease cancel transaction.
 }
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -166,8 +162,3 @@ Creates signed lease cancel transaction.
   "txId" : "CYPYhYe9M94t958Nsa3DcYNBZTURwcFgQ3ojyjwEeZiK"
 }
 ```
-
-### 
-
-
-

@@ -4,9 +4,9 @@
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Connect to peer.
+Подключение к пирам.
 
-**Request:**
+**Запрос:**
 
 ```js
 {
@@ -18,9 +18,9 @@ Connect to peer.
 ## GET /peers/connected
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Returns list of all currently connected peers to the node.
+Возвращает список пиров, подключенных к ноде.
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -45,9 +45,9 @@ Returns list of all currently connected peers to the node.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Returns list of all currently blacklisted peers to the node.
+Возвращает список пиров в данный момент находящихся в черном списке ноды.
 
 ## GET /peers/all
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Returns list of all ever known not blacklisted peers with publicly available declared address.
+Возвращает список всех известных пиров не из черного списка с публично заявленными адресами.

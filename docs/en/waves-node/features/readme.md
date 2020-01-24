@@ -1,10 +1,10 @@
-# Feature
+# Features
 
-A **feature** is a new functionality added to the [Waves blockchain](/en/blockchain/blockchain) during a new [release](https://github.com/wavesplatform/Waves/releases).
+**Feature** is a new functionality added to the [Waves blockchain](/en/blockchain/blockchain) during a new [release](https://github.com/wavesplatform/Waves/releases).
 
 Each feature has a name and a unique feature ID.
 
-## Feature status
+## Feature Status
 
 Each feature can be in one of three statuses:
 

@@ -638,14 +638,10 @@ module.exports = {
     },
     {
       title: 'Features',
-      path: nodePath + 'features/features',
+      path: nodePath + 'features',
       children: [
         {
-          title: 'Feature',
-          path: nodePath + 'features/feature',
-        },
-        {
-          title: 'Feature activation protocol',
+          title: 'Feature Activation Protocol',
           path: nodePath + 'features/feature-activation-protocol',
         }
       ],

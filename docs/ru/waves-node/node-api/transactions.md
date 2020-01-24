@@ -1,18 +1,18 @@
-# Transactions
+# Транзакции
 
 ## GET /transactions/info/{id}
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Return transaction data by transaction ID.
+Возвращает данные транзакции по ID.
 
-**Request params:**
+**Параметры запроса:**
 
 ```
 "id" - Transaction ID
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -36,16 +36,16 @@ Return transaction data by transaction ID.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Return the specified number of the latest transactions by the given account address.
+Возвращает заданное количество последних странзакций по адресу аккаунта.
 
-**Request params:**
+**Параметры запроса:**
 
 ```
-"address" - Account's address Base58-encoded
-"limit" - Number of transaction to return, max = 50.
+"address" - Адрес аккаунта в Base58
+"limit" - Количество возвращаемых транзакций, max = 50.
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 [
@@ -69,9 +69,9 @@ Return the specified number of the latest transactions by the given account addr
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Return a list of unconfirmed transactions in the node pool.
+Возвращает список неподтверждённых транзакций пула ноды.
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 [
@@ -96,9 +96,9 @@ Return a list of unconfirmed transactions in the node pool.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Return the number of unconfirmed transactions in the UTX pool.
+Возвращает количество неподтвержденных транзакций в UTX пуле.
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -109,15 +109,15 @@ Return the number of unconfirmed transactions in the UTX pool.
 ## GET /transactions/unconfirmed/info/{id}
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Return an unconfirmed transaction by its ID.
+Возвращает неподтвержденную транзакцию по ID.
 
-**Request params:**
+**Параметры запроса:**
 
 ```
 "id" - Transaction ID
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -141,7 +141,7 @@ Return an unconfirmed transaction by its ID.
 }
 ```
 
-or 
+или
 
 ```js
 {
@@ -154,9 +154,9 @@ or
 
 ![master](https://img.shields.io/badge/node-&gt;%3D0.14.3-4bc51d.svg)
 
-Calculates a fee for an arbitrary transaction and returns it. The transaction type to be specified in the request body. The types are as follows:
+Считает и возвращает комиссию произвольной транзакции. Тип транзакции может быть задан в теле запроса. Бывают следующие типы:
 
-| Type Code | Transaction Type |
+| Код | Тип транзакции |
 | :--- | :--- |
 | 3 | Issue |
 | 4 | Transfer |
@@ -170,17 +170,17 @@ Calculates a fee for an arbitrary transaction and returns it. The transaction ty
 | 13 | Set Script |
 | 14 | Sponsorship |
 
-**Request params**
+**Параметры запроса:**
 
 ```
-"type" - Transaction type
-"senderPublicKey" - Public key of sender
-"sender" is ignored
-"fee" is ignored
-and all the other parameters appropriate for a transaction of the given type.
+"type" - тип транзакции
+"senderPublicKey" - публичный ключ отправителя
+"sender" игнорируется
+"fee" игнорируется
+и все прочие параметры подходящие для транзакции выбранного типа.
 ```
 
-**Request JSON example**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -191,7 +191,7 @@ and all the other parameters appropriate for a transaction of the given type.
 }
 ```
 
-or
+или
 
 ```js
 {
@@ -204,7 +204,7 @@ or
 }
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```
 {
@@ -226,9 +226,9 @@ or
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Signs an arbitrary transaction. This requires an API key, and transaction type to be specified in the request body. The types are as follows:
+Подписывает произвольную транзакцию. Требует API ключ, а также необходимо задать тип транзакции в теле запроса. Бывают слебующие типы:
 
-| Type Code | Transaction Type |
+| Код | Тип транзакции |
 | :--- | :--- |
 | 3 | Issue |
 | 4 | Transfer |
@@ -242,17 +242,17 @@ Signs an arbitrary transaction. This requires an API key, and transaction type t
 | 13 | Set Script |
 | 14 | Sponsorship |
 
-An optional `timestamp` parameter may be specified, which represents transaction timestamp in milliseconds. If it is omitted, current server time is used.
+Опциональный параметр `timestamp` может быть задан, чтобы отображать отметку времени в миллисекундах. Если параметр не исключен, то используется метное время сервера.
 
-**Request params**
+**Параметры запроса:**
 
 ```
-"type" - Transaction type
-"timestamp" - [optional] transaction timestamp in milliseconds
-and all the other parameters appropriate for a transaction of the given type.
+"type" - тип транзакции
+"timestamp" - [Опциональный параметр] отметка времени в миллисекундах
+и все прочие параметры подходящие для транзакции выбранного типа.
 ```
 
-**Request JSON example**
+**Пример запроса в JSON**
 
 ```js
 {
@@ -264,7 +264,7 @@ and all the other parameters appropriate for a transaction of the given type.
 }
 ```
 
-or
+или
 
 ```js
 {
@@ -277,7 +277,7 @@ or
 }
 ```
 
-**Response JSON example**
+**Пример ответа в JSON**
 
 ```js
 {
@@ -296,13 +296,13 @@ or
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Signs an arbitrary transaction by a private key of signer. This requires an API key, a signer address and transaction type to be specified in the request body.
+Подписывает произвольную транзакцию приватным ключом сайнера. Требует API ключ, адрес сайнера, а также необходимо задать тип транзакции в теле запроса.
 
-`signerAddress` should be created by [POST /addresses](https://docs.wavesplatform.com/development-and-api/node-api/address.html#post-addresses).
+`signerAddress` должен быть создан в [POST /addresses](https://docs.wavesplatform.com/development-and-api/node-api/address.html#post-addresses).
 
-The types are as follows:
+Бывают слебующие типы:
 
-| Type Code | Transaction Type |
+| Код | Тип транзакции |
 | :--- | :--- |
 | 3 | Issue |
 | 4 | Transfer |
@@ -316,17 +316,17 @@ The types are as follows:
 | 13 | Set Script |
 | 14 | Sponsorship |
 
-An optional `timestamp` parameter may be specified, which represents transaction timestamp in milliseconds. If it is omitted, current server time is used.
+Можно дополнительно задать параметр `timestamp`, который представляет временную метку транзакции в миллисекундах. Если параметр исключен, то используется метное время сервера.
 
-**Request params**
+**Параметры запроса:**
 
 ```
-"type" - Transaction type
-"timestamp" - [optional] transaction timestamp in milliseconds
-and all the other parameters appropriate for a transaction of the given type.
+"type" - Тип транзакции
+"timestamp" - [Опциональный параметр] отметка времени в миллисекундах
+и все прочие параметры подходящие для транзакции выбранного типа.
 ```
 
-**Request JSON example**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -338,7 +338,7 @@ and all the other parameters appropriate for a transaction of the given type.
 }
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -357,16 +357,16 @@ and all the other parameters appropriate for a transaction of the given type.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Broadcasts a signed transaction of any type.
+Передает подписанную транзакцию любого типа.
 
-**Request params**
+**Параметры запроса:**
 
 ```
-"type" - Transaction type
-and all the other parameters appropriate for a transaction of the given type.
+"type" - Тип транзакции
+и все прочие параметры подходящие для транзакции выбранного типа.
 ```
 
-**Request JSON example**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -379,7 +379,7 @@ and all the other parameters appropriate for a transaction of the given type.
 }
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -400,13 +400,13 @@ and all the other parameters appropriate for a transaction of the given type.
 
 ![master](https://img.shields.io/badge/node-%3E%3D%201.1.7-brightgreen)
 
-Returns the list of transactions statuses, by transaction IDs. The resulting transaction list keeps the order of the transaction IDs as they were passed in the request. If the transactions IDs were not specified, the request will not be executed and an error will be returned.
+Возвращает список статусов странзакций по ID транзакций. В полученном списке сохраняется такой же порядок ID транзакций, как в запросе. Если ID транзакций не были заданы, запрос будет возвращём с ошибкой.
 
-**Request params**
+**Параметры запроса:**
 
 `id` - transaction id
 
-**Request JSON example**
+**Пример запроса в JSON:**
 
 ```js
 [
@@ -422,7 +422,7 @@ Returns the list of transactions statuses, by transaction IDs. The resulting tra
 ]
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 - `id` - transaction ID
 - `status` - transaction status. `not_found` - transaction not found, `unconfirmed` - transaction is in UTX-pool, `confirmed` - transaction is in the block or microblock.
@@ -454,9 +454,9 @@ Returns the list of transactions statuses, by transaction IDs. The resulting tra
 
 ![master](https://img.shields.io/badge/node-%3E%3D%201.1.7-brightgreen)
 
-Returns the list of transactions statuses, by transaction IDs. The resulting transaction list keeps the order of the transaction IDs as they were passed in the request. If the transactions IDs were not specified, the request will not be executed and an error will be returned.
+Возвращает список статусов странзакций по ID транзакций. В полученном списке сохраняется такой же порядок ID транзакций, как в запросе. Если ID транзакций не были заданы, запрос будет возвращём с ошибкой.
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 - `id` - transaction ID
 - `status` - transaction status. `not_found` - transaction not found, `unconfirmed` - transaction is in UTX-pool, `confirmed` - transaction is in the block or microblock.

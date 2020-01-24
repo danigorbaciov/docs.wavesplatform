@@ -4,19 +4,19 @@
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Creates signed alias transaction for sender's address.
+Создает подписанную alias транзакцию для адреса отправителя.
 
-**Request params**
+**Параметра запроса:**
 
 ```
-"senderPublicKey" - Sender account's public key, Base58-encoded
-"fee" - Amount of transaction fee
-"alias" - alias for a sender's address
-"timestamp" - Transaction timestamp
-"signature" - Signature of all transaction data, Base58-encoded
+"senderPublicKey" - Публичный ключ аккаунта отправителя в Base58
+"fee" - Сумма комиссии транзакции
+"alias" - alias для адреса отправителя
+"timestamp" - Временная отметка транзакции
+"signature" - Подпись всех данных странзакции в Base58
 ```
 
-**Request JSON example**
+**Пример запроса в JSON:**
 
 ```js
  {
@@ -28,7 +28,7 @@ Creates signed alias transaction for sender's address.
 }
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -46,15 +46,15 @@ Creates signed alias transaction for sender's address.
 ## POST /alias/create
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-**Request params**
+**Параметры запроса:**
 
 ```
-"sender" - Sender's addresss, Base58-encoded
-"fee" - Amount of transaction fee
-"alias" - alias for a sender's address
+"sender" - Адрес отправителя в Base58
+"fee" - Сумма комиссии транзакции
+"alias" - alias для адреса отправителя
 ```
 
-**Request JSON example**
+**Пример запроса в JSON:**
 
 ```js
  {
@@ -64,7 +64,7 @@ Creates signed alias transaction for sender's address.
 }
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -83,13 +83,13 @@ Creates signed alias transaction for sender's address.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-**Request params**
+**Параметры запроса:**
 
 ```
 "alias" - alias
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -103,13 +103,13 @@ Creates signed alias transaction for sender's address.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-**Request params**
+**Параметры запроса:**
 
 ```
 "address" - address
 ```
 
-**Response JSON example**
+**Пример ответа в JSON:**
 
 ```js
 [
@@ -120,6 +120,3 @@ Creates signed alias transaction for sender's address.
 
 ]
 ```
-
-
-

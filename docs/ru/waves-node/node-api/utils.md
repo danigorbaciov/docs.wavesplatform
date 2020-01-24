@@ -1,18 +1,18 @@
-# Utils
+# Утилиты
 
 ## POST /utils/hash/secure
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Produce a secure hash of a specified message.
+Получить безопасный хэш заданного сообщения.
 
-**Request:**
+**Запрос:**
 
 ```
 ridethewaves!
 
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -25,16 +25,16 @@ ridethewaves!
 ## POST /utils/hash/fast
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Fast hash of specified message.
+Быстрый хэш заданного сообщения.
 
-**Request:**
+**Запрос:**
 
 ```
 ridethewaves!
 
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -48,9 +48,9 @@ ridethewaves!
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Generate a random seed of specified length.
+Сгенерировать случайный seed заданной длины.
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -61,9 +61,9 @@ Generate a random seed of specified length.
 ## GET /utils/seed
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Generate a random seed.
+Сгенерировать случайный seed.
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -76,27 +76,27 @@ Generate a random seed.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg) ![master](https://img.shields.io/badge/node-&gt;%3D0.13.3-4bc51d.svg)
 
-Compiles a human-readable code into a Base58 representation for Node.
+Компилирует человекочитаемый код в представление Base58 для ноды.
 
-**Request body:**
+**Тело запроса:**
 A code.
 
-**Response params:**
+**Параметры ответа:**
 
 ```
-"script" - Base58-encoded representation of compiled script for Node
-"complexity" - How script is complicated
-"extraFee" - An extra fee for all transactions going from an account with this script if the miner is this node
+"script" - Base58-encoded представление скомпилированного скрипта ноды
+"complexity" - Как компилируется скрипт
+"extraFee" - Дополнительная комиссия за все транзакции от аккаунта со скриптом, если этот майнер и есть эта нода
 ```
 
-**A valid request body example:**
+**Пример валидного запроса:**
 
 ```
 let x = 1
 (x + 1) == 2
 ```
 
-**Response for it:**
+**Ответ:**
 
 ```json
 {
@@ -106,13 +106,13 @@ let x = 1
 }
 ```
 
-**An invalid request body example:**
+**Пример не валидного запроса:**
 
 ```
 x == 1
 ```
 
-**Response for it:**
+**Ответ:**
 
 ```json
 {
@@ -126,10 +126,10 @@ x == 1
 
 Estimates a human-readable code into a Base58 representation for Node.
 
-**Request body:**
+**Запрос:**
 A code.
 
-**Response params:**
+**Параметры ответа:**
 
 ```
 "script" - Base58-encoded representation of compiled script for Node (what did you send in the body)
@@ -138,13 +138,13 @@ A code.
 "extraFee" - An extra fee for all transactions going from an account with this script if the miner is this node
 ```
 
-**A valid request body example:**
+**Пример валидного запроса:**
 
 ```
 3rbFDtbPwAvSp2vBvqGfGR9nRS1nBVnfuSCN3HxSZ7fVRpt3tuFG5JSmyTmvHPxYf34SocMRkRKFgzTtXXnnv7upRHXJzZrLSQo8tUW6yMtEiZ
 ```
 
-**Response for it:**
+**Ответ:**
 
 ```json
 {
@@ -155,13 +155,13 @@ A code.
 }
 ```
 
-**An invalid request body example:**
+**Пример не валидного запроса:**
 
 ```
 This is even not a Base58 string!
 ```
 
-**Response for it:**
+**Ответ:**
 
 ```json
 {

@@ -1,5 +1,5 @@
-# Feature activation protocol
+# Протокол активайции фич
 
-**Feature activation protocol** is a procedure according to which a new [feature](/en/waves-node/features/feature) gets activated, i.e. it gets the "activated" [status](/en/waves-node/features/feature).
+**Протокол активайции фичи** это процедура, согласно которой активируются новые [фичи](/en/waves-node/features/feature), и фича получает статус "activated" [status](/en/waves-node/features/feature).
 
-For more details see [Activation protocol](/en/blockchain/waves-protocol/activation-protocol) page.
+Подробнее в статье [Протокол активации](/en/blockchain/waves-protocol/activation-protocol) page.

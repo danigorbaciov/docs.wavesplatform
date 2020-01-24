@@ -1,12 +1,12 @@
-# Example Transactions
+# Примеры транзакций
 
-Listed below are examples of real transactions of each type found in _**testnet**_ and _**mainnet**_.
+Ниже приведены примеры реальных транзакций каждого типа из _**testnet**_ и _**mainnet**_.
 
-## V1 transactions
+## V1 транзакции
 
 ### Testnet
 
-| Type ID | Transaction Type | Example Transaction V1
+| ID Типа | Тип транзакции | Пример транзакции V1 |
 | ---: | --- | --- | --- |
 | 3 | Issue | [8jfD2JBLe23XtCCSQoTx5eAW5QCU6Mbxi3r78aNQLcNf](https://testnode1.wavesnodes.com/transactions/info/8jfD2JBLe23XtCCSQoTx5eAW5QCU6Mbxi3r78aNQLcNf) [193](https://testnode1.wavesnodes.com/blocks/at/193) |
 | 4 | Transfer | [8W9BkioPSWmPfDjcTFGaCy8vLEmcwkzJeSWno1s3Wra7](https://testnode1.wavesnodes.com/transactions/info/8W9BkioPSWmPfDjcTFGaCy8vLEmcwkzJeSWno1s3Wra7) [56](https://testnode1.wavesnodes.com/blocks/at/56) |
@@ -25,7 +25,7 @@ Listed below are examples of real transactions of each type found in _**testnet*
 
 ### Mainnet
 
-| Type ID | Transaction Type | Example Transaction V1 |
+| ID Типа | Тип транзакции | Пример транзакции V1 |
 | ---: | --- | --- | --- |
 | 3 | Issue | [oWgJN6YGZFtZrV8BWQ1PGktZikgg7jzGmtm16Ktyvjd](https://nodes.wavesnodes.com/transactions/info/oWgJN6YGZFtZrV8BWQ1PGktZikgg7jzGmtm16Ktyvjd) [1039500](https://nodes.wavesnodes.com/blocks/at/1039500) |
 | 4 | Transfer | [JAutkv1Nk4xVrkb4fkacS4451VvyHC3iJtEDfBRD7rwr](https://nodes.wavesnodes.com/transactions/info/JAutkv1Nk4xVrkb4fkacS4451VvyHC3iJtEDfBRD7rwr) [1039500](https://nodes.wavesnodes.com/blocks/at/1039500) |
@@ -42,11 +42,11 @@ Listed below are examples of real transactions of each type found in _**testnet*
 | 15 | Set Asset Script | [FwYSpmVDbWQ2BA5NCBZ9z5GSjY39PSyfNZzBayDiMA88](http://nodes.wavesnodes.com/transactions/info/FwYSpmVDbWQ2BA5NCBZ9z5GSjY39PSyfNZzBayDiMA88) [1346345](https://nodes.wavesnodes.com/blocks/at/1346345) |
 | 16 | InvokeScript | [7CVjf5KGRRYj6UyTC2Etuu4cUxx9qQnCJox8vw9Gy9yq](https://wavesexplorer.com/tx/7CVjf5KGRRYj6UyTC2Etuu4cUxx9qQnCJox8vw9Gy9yq) |
 
-## V2 transactions
+## V2 транзакции
 
 ### Testnet
 
-| Type ID | Transaction Type | Example Transaction V2 |
+| ID Типа | Тип транзакции | Пример транзакции V2 |
 | ---: | --- | --- | --- |
 | 3 | Issue | [7Xpp9PPeZbG4wboJrcbRQdq3SxCJqbeFRUjjKccM1DsD](https://testnode1.wavesnodes.com/transactions/info/7Xpp9PPeZbG4wboJrcbRQdq3SxCJqbeFRUjjKccM1DsD) [469677](https://testnode1.wavesnodes.com/blocks/at/469677) |
 | 4 | Transfer | [87pYzMrbDY6ad6B6qqC2XdQkiG37TBr9PWYbUas59poU](https://testnode1.wavesnodes.com/transactions/info/87pYzMrbDY6ad6B6qqC2XdQkiG37TBr9PWYbUas59poU) [469900](https://testnode1.wavesnodes.com/blocks/at/469900) |
@@ -59,7 +59,7 @@ Listed below are examples of real transactions of each type found in _**testnet*
 
 ### Mainnet
 
-| Type ID | Transaction Type | Example Transaction V2 |
+| ID Типа | Тип транзакции | Пример транзакции V2 |
 | ---: | --- | --- | --- |
 | 3 | Issue | [FTQvw9zdYirRksUFCKDvor3hiu2NiUjXEPTDEcircqti](https://nodes.wavesnodes.com/transactions/info/FTQvw9zdYirRksUFCKDvor3hiu2NiUjXEPTDEcircqti) [1371069](https://nodes.wavesnodes.com/blocks/at/1371069) |
 | 4 | Transfer | [D79kL1Jr5xyL2Rmw2FnafQHugJGvuBhNEbLnhMuwMkDC](https://nodes.wavesnodes.com/transactions/info/D79kL1Jr5xyL2Rmw2FnafQHugJGvuBhNEbLnhMuwMkDC) [1370973](https://nodes.wavesnodes.com/blocks/at/1370973) |

@@ -562,9 +562,15 @@ module.exports = {
         },
       ]
     },
-	  {
-      title: 'Node API',
-      path: nodePath + 'node-api',
+	    {
+      title: 'Features',
+      path: nodePath + 'features',
+      children: [
+        {
+          title: 'Feature Activation Protocol',
+          path: nodePath + 'features/feature-activation-protocol',
+        }
+      ],
     },
     {
       title: 'Конфигурация ноды',
@@ -573,6 +579,10 @@ module.exports = {
     {
       title: 'Конфигурация логирования',
       path: nodePath + 'logging-configuration',
+    },
+	{
+      title: 'Node API',
+      path: nodePath + 'node-api',
     },
     {
       title: 'Ограничения API пула публичных нод',

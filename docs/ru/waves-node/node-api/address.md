@@ -4,9 +4,9 @@
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Get list of all accounts addresses in the node's wallet.
+Получить список всех адресов аккаунта кошелька ноды.
 
-**Response:**
+**Ответ:**
 
 ```js
 [
@@ -19,9 +19,9 @@ Get list of all accounts addresses in the node's wallet.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Get list of accounts addresses with indexes at this range in the node's wallet.
+Получить список всех адресов аккаунтов с индексами заданного диапазона в кошельке ноды.
 
-**Response:**
+**Ответ:**
 
 ```js
 [
@@ -34,15 +34,15 @@ Get list of accounts addresses with indexes at this range in the node's wallet.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Generate a new account address in the wallet._Requires API\_KEY to be provided_
+Сгенерировать новый адрес аккаунта в кошельке. Необходим API ключ.
 
 **Request params:**
 
 ```
-  "address" - account's address in Base58 format
+  "address" - Адрес аккаунта в Base58
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -56,17 +56,17 @@ Generate a new account address in the wallet._Requires API\_KEY to be provided_
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Get Balance details:
+Получить данные о балансе:
 
 ```
-"address" - account's address in Base58 format
-"Regular" — that's how much Waves you have, including those you leased;
-"Available" — the same as regular only without Waves you leased;
-"Effective" — available plus those Waves which is leased to you;
-"Generating" — the minimal effective for last 1000 blocks;
+"address" - адрес аккаунта в Base58
+"Regular" — количество Waves, которое у вас есть, включая переданные в лизинг;
+"Available" — количество Waves, которое у вас есть, не включая переданные в лизинг;
+"Effective" — количество Waves, которое у вас есть, включая переданные Вам в лизинг;
+"Generating" — минимальный генеэффективныйза последние 1000 блоков;
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -82,13 +82,13 @@ Get Balance details:
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Get account balance in WAVES in {address}:
+Получить баланс аккаунта в WAVES на {address}:
 
 ```
-  "address" - account's address in Base58 format
+  "address" - адрес аккаунта в Base58
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -104,14 +104,14 @@ Get account balance in WAVES in {address}:
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Get account balance in WAVES by {address} after {confirmations} from now:
+Получить баланс аккаунта в WAVES на {address} после {confirmations}:
 
 ```
-  "address" - account's address in Base58 format
-  "confirmations" - N of confirmations
+  "address" - адрес акаунта в Base58
+  "confirmations" - N количество подтверждний
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -129,17 +129,17 @@ Get account balance in WAVES by {address} after {confirmations} from now:
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg) ![master](https://img.shields.io/badge/node->%3D0.13.3-4bc51d.svg)
 
-Get a script information by address.
+Получить данные скрипта по адресу.
 
 ```
-  "address" - account's address in Base58 format
-  "script" - Base58 representation of compiled script. The field is not present, if no script is set for address
-  "scriptText" - Text representation of script. The field is not present, if no script is set for address
-  "complexity" - How script is complicated
-  "extraFee" - An extra fee for all transactions going from this account if the miner is this node
+  "address" - адрес аккаунта в Base58
+  "script" - Base58 представление скомпилированного скрипта. Поле отсутствует если скрипт не назначен для адреса
+  "scriptText" - Текстовое представление скрипта. Поле отсутствует если скрипт не назначен для адреса
+  "complexity" - Сложность скрипта
+  "extraFee" - Дополнительная комиссия за все транзакции отправленные с данного аккаунта если майнер это и есть эта нода
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {

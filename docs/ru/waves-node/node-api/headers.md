@@ -2,25 +2,24 @@
 
 ## api-key
 
-[API key](https://en.wikipedia.org/wiki/Application_programming_interface_key) of the node owner is highly important as the [seed](http://confluence.wavesplatform.com/display/WDOCS/Seed+phrase) phrase and the password of the wallet.
+[API ключ](https://en.wikipedia.org/wiki/Application_programming_interface_key) владельца ноды очень важен как и seed фраза и пароль кошелька.
 
-The API key is transmitted in the HTTP header as unprotected plain text in `api-key` header. An attacker can intercept it in the network transit and use it to transfer your money to any address! So it's highly important to protect the transmission using HTTPS or SSH port forwarding.
+API ключ передается в HTTP хэдере как незащищенный plain текст в `api-key`. Злоумышленник может перехватить его во время передачи по сети и использовать его для перевода ваших активов на любой адрес! Очень важно защищать передачу с помощью HTTPS или SSH ретрансляции порта.
 
-Please note that node does not have built-in HTTPS support. Consider using HTTPS-proxy, for example, nginx.
-
+Имейте ввиду, что нода не имеет встроенной поддержки HTTPS. Рассмотрите возможность применения HTTPS-proxy, например, nginx.
 
 ## large-significand-format=string
 
-Sets serialization format for monetary fields. If set, the field will be serialized to JSON as a string, otherwise - as a number. This can be useful for values with long mantissa.
+Устанавливает формат сериализации для денежных полей. Если установлено, поле будет сериализовано в JSON как строка, в противном случае - как число. Это может быть полезно для значений с длинной дробной частью логарифма.
 
-### Example
+### Пример
 
 ```
 curl -X GET --header 'Accept: application/json; large-significand-format=string' 'https://nodes.wavesnodes.com/blocks/headers/last'
 
 ```
 
-Below is the list of endpoints accepting this header.
+Ниже приведен список конечных точек, принимающих этот хэдер.
 
 #### GET /addresses/balance/{address}/{confirmations}
 
